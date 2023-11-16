@@ -1,0 +1,148 @@
+@font-face { 
+    font-family: "NotoSerifDisplay";
+    src: url("../Fonts/NotoSerifDisplay-VariableFont_wdth\,wght.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face { 
+    font-family: "Montserrat";
+    src: url("../Fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+    font-display: swap;
+}
+
+body {
+    background-color: #52604E;
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+    color: #52604F;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: "NotoSerifDisplay", Verdana, Tahoma, sans-serif;
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 20px;
+    margin: -10px -8px 0px -8px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+    text-transform: uppercase;
+    color: #52604F;
+    font-weight: 550;
+    font-size: 20px;
+}
+
+.nav-list {
+    list-style: none;
+    background-color: #ffff;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding-top: 20px;
+    top: 151px;
+    padding: 20px;
+    left: 0;
+    z-index: 1;
+} 
+
+.hamburger-icon {
+    margin-top: 45px;
+    width: 30px;
+    height: 30px;
+    background-image: url(../Images/Hamburger.png);
+    background-size: cover;
+}
+
+.nav-list.show {
+    display: flex;
+}
+
+.nav-list li {
+   margin-bottom: 20px;
+ }
+
+ .toggle-menu {
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+#active {
+    text-decoration: underline;
+}
+
+.logo-desktop {
+    display: none;
+}
+
+.logo-mobile {
+    max-width: 140px;
+    height: auto;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.loader-div {
+    display: flex;
+    justify-content: center;
+}
+
+.loader {
+    border: 16px solid #B6CCC1; 
+    border-top: 16px solid #52604F; 
+    background-image: url(../Images/Leaf.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.error {
+
+}
+
+@media (min-width: 600px) {
+    .toggle-menu {
+        display: none;
+    }
+
+    .nav-list {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: auto;
+        padding-top: 15px;
+        flex-direction: row;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .hamburger-icon {
+        display: none;
+    }
+
+    .nav-list li {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+
+    .logo-desktop {
+        padding-top: 40px;
+        display: block;
+    }
+}

@@ -1,0 +1,93 @@
+.upper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.upper .logo-desktop img {
+    padding-top: 10px;
+    max-width: 200px;
+    height: auto; 
+}
+
+.upper .plantleft img {
+    max-width: 650px;
+    height: auto;
+}
+
+.upper .plantright img {
+    padding-top: 30px;
+    max-width: 300px;
+    height: auto;
+}
+
+#posts {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#posts h1 {
+    font-size: 45px;
+}
+
+.card-div {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.card {
+    background-color: #B6CCC1;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-decoration: none;
+    width: 270px;
+    height: 470px;
+    padding: 10px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card img {
+    width: 240px;
+    height: 304px;
+    padding: 10px;
+}
+
+.card-h2 {
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 18px;
+    color: #52604F;
+    font-weight: 400;
+    text-align: center;
+}
+
+.read-btn {
+    background-color: #52604F;
+    color: #fff;
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+    border-radius: 0;
+    border-style: none;
+    height: 38px;
+    /* width: 155px; */
+    padding: 3px 35px 3px 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+} 
+
+
+#prev-btn, #next-btn {
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+}
