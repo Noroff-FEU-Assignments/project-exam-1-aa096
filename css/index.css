@@ -32,11 +32,22 @@
     font-size: 45px;
 }
 
+.loader-here {
+    display: flex;
+    justify-content: center;
+}
+
 .card-div {
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+.posts-holder {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
     gap: 10px;
 }
 
@@ -44,7 +55,7 @@
     background-color: #B6CCC1;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     text-decoration: none;
     width: 270px;
     height: 470px;
@@ -78,7 +89,6 @@
     border-radius: 0;
     border-style: none;
     height: 38px;
-    /* width: 155px; */
     padding: 3px 35px 3px 35px;
     text-transform: uppercase;
     cursor: pointer;

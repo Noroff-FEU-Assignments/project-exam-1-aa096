@@ -3,96 +3,112 @@ import { getPosts } from "../data/API.js";
 import { showLoadingIndicator } from "./loadingIndicator.js";
 
 const latestContainer = document.querySelector("#posts");
+const loaderHere = document.querySelector(".loader-here");
+const previousBtn = document.querySelector("#prev-btn");
+const nextBtn = document.querySelector("#next-btn");
+const cardDiv = document.querySelector(".card-div");
+
 let currentIndex = 0;
 let latest; 
+let postPerPage;
 
-const cardHolder = document.createElement("div");
-cardHolder.classList.add("card-div");
+const postsDiv = document.createElement("div");
+postsDiv.classList.add("posts-holder");
 
-const prevBtn = document.createElement('button'); 
-prevBtn.id = 'prev-btn';;
+const btnImgPriv = document.createElement("img");
+btnImgPriv.src = "Images/Leafleft.png";
+btnImgPriv.alt = "Previous";
 
-const prevImg = document.createElement('img');
-prevImg.src = "Images/leafleft.png";
-prevImg.alt = "Previous";
+previousBtn.appendChild(btnImgPriv);
 
-prevBtn.appendChild(prevImg);
-cardHolder.appendChild(prevBtn);
+const btnImgNext = document.createElement("img");
+btnImgNext.src = "Images/Leafright.png";
+btnImgNext.alt = "Next";
 
-const nextBtn = document.createElement('button');
-nextBtn.id = 'next-btn';
-
-const nextImg = document.createElement('img');
-nextImg.src = "Images/leafright.png";
-nextImg.alt = "Next";
-
-nextBtn.appendChild(nextImg);
-cardHolder.appendChild(nextBtn);
+nextBtn.appendChild(btnImgNext);
 
 
-async function renderLatestPosts() {
+cardDiv.appendChild(postsDiv);
+
+
+function responsivePosts () {
+    if (window.innerWidth >= 1400) {
+        postPerPage = 4;
+    } else if (window.innerWidth >= 900) {
+        postPerPage = 3;
+    } else if (window.innerWidth >= 600) {
+        postPerPage = 2;
+    } else {
+        postPerPage = 1;
+    }
+}
+
+async function renderLatestPosts(startIndex) {
     try { 
-        showLoadingIndicator("#posts")
+        showLoadingIndicator(".loader-here")
         latest = await getPosts();
  
-        latestContainer.innerHTML ="";
+        loaderHere.innerHTML = "";
 
-        const heading = document.createElement("h1");
-        heading.textContent = "Latest Posts";
-        latestContainer.appendChild(heading);
+        postsDiv.innerHTML = "";
         
-    for (let i = currentIndex; i < currentIndex + 4 i++) {
-        if (i < latest.length) { 
-        const post = latest[i];
+        for (let i = startIndex; i < startIndex + postPerPage && i < latest.length; i++) {
+            const post = latest[i];
 
-        const postCard = document.createElement("div");
-        postCard.classList.add("card");
+            const postCard = document.createElement("div");
+            postCard.classList.add("card");
 
-        const newestLink = document.createElement("a");
-        newestLink.href = "post.html?id=" + post.id; 
+            const newestLink = document.createElement("a");
+            newestLink.href = "post.html?id=" + post.id; 
 
-        const postImg = document.createElement("img");
-        postImg.src = post.jetpack_featured_media_url;
-        postImg.alt = post.title.rendered;
+            const postImg = document.createElement("img");
+            postImg.src = post.jetpack_featured_media_url;
+            postImg.alt = post.title.rendered;
 
-        const postTitle = document.createElement("h2");
-        postTitle.classList.add("card-h2");
-        postTitle.textContent = post.title.rendered;
+            const postTitle = document.createElement("h2");
+            postTitle.classList.add("card-h2");
+            postTitle.textContent = post.title.rendered;
 
-        const readBtn = document.createElement('button');
-        readBtn.classList.add('read-btn');
-        readBtn.textContent = 'Read More';
+            const readBtn = document.createElement('button');
+            readBtn.classList.add('read-btn');
+            readBtn.textContent = 'Read More';
 
-        cardHolder.appendChild(postCard)
-        postCard.appendChild(newestLink);
-        newestLink.appendChild(postImg);
-        newestLink.appendChild(postTitle);
-        newestLink.appendChild(readBtn);
-    }
-        latestContainer.appendChild(cardHolder);
+            postsDiv.appendChild(postCard);
+            postCard.appendChild(newestLink);
+            newestLink.appendChild(postImg);
+            newestLink.appendChild(postTitle);
+            newestLink.appendChild(readBtn);
         }
-    } 
-    catch (error) {
+        
+        postsDiv.appendChild(previousBtn);
+        postsDiv.appendChild(nextBtn);
+
+    } catch (error) {
         showError(error.message,"#posts");
     }
 }
 
-function showNext() {
-    if (currentIndex < latest.length - 4) {
-        currentIndex += 1;
-        renderLatestPosts();
-    }
+function updateButtons () {
+    previousBtn.disabled = currentIndex === 0;
+    nextBtn.disabled = currentIndex + postPerPage >= latest.length;
 }
-    
-    
-function showPrev() {
-    if (currentIndex > 0) {
-        currentIndex -= 1;
-        renderLatestPosts();
-    }
-}
-    
-nextBtn.addEventListener('click', showNext);
-prevBtn.addEventListener('click', showPrev);
 
-renderLatestPosts();
+nextBtn.addEventListener('click', () => {
+    if (currentIndex + postPerPage < latest.length) {
+        currentIndex += postPerPage;
+        renderLatestPosts(currentIndex);
+        updateButtons();
+    }
+});
+
+previousBtn.addEventListener('click', () => {
+    if (currentIndex - postPerPage >= 0) {
+        currentIndex -= postPerPage;
+        renderLatestPosts(currentIndex);
+        updateButtons();
+    }
+});
+
+responsivePosts ();
+renderLatestPosts(0);
+updateButtons();
