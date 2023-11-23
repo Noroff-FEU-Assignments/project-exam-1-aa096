@@ -1,5 +1,5 @@
 export async function getPosts() {
-    const url = "https://aashild-rasmussen.no/wp-json/wp/v2/posts/";
+    const url = "https://aashild-rasmussen.no/wp-json/wp/v2/posts?per_page=100";
     
 try { 
     const response = await fetch(url);

@@ -23,7 +23,7 @@ h1, h2, h3, h4, h5 {
 .navbar {
     background-color: #fff;
     padding: 20px;
-    margin: -10px -8px 0px -8px;
+    margin: -8px -8px 0px -8px;
 }
 
 .nav-list a {
@@ -83,10 +83,40 @@ h1, h2, h3, h4, h5 {
     height: auto;
 }
 
-.footer {
+#footer {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-around;
+    background-color: #fff;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+h5 {
+    font-size: 35px;
+    text-decoration: underline;
+    color: #52604F;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.navigate {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navigate a, li {
+    text-decoration: none;
+    color: #52604F;
+    list-style: none;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 5px;
+}
+
+.navigate a:hover, li:hover {
+    font-weight: bold;
+    background-color: #B6CCC1;
 }
 
 .loader-div {
@@ -101,9 +131,31 @@ h1, h2, h3, h4, h5 {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
     animation: spin 2s linear infinite;
+    position: absolute;
+}
+
+.logo-foot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.logo-foot img {
+    max-width: 250px;
+    height: auto;
+}
+
+.follow h5 {
+    padding-bottom: 10px;
+}
+
+.follow img {
+    padding-left: 5px;
 }
 
 @keyframes spin {
@@ -112,7 +164,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .error {
-
+ color: #fff;
+ text-align: center;
 }
 
 @media (min-width: 600px) {
