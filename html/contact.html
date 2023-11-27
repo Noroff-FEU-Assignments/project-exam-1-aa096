@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Leaf at Home</title>
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/contact.css" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="toggle-menu" id="hamburger">
+            <div class="hamburger-icon">
+            </div>
+            <a href="../index.html"><img src="../Images/Logomobile.png" alt="logo of Leaf at Home in green" class="logo-mobile"></a>
+            <div></div>
+            </div>
+        </div>
+        <ul class="nav-list">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../html/blogposts.html">Blog Posts</a></li>
+            <li><a href="../html/contact.html" id="active">Contact</a></li>
+            <li><a href="../html/about.html">About Us</a></li>
+        </ul>
+    </div>
+    <div class="upper">
+        <div class="plantleft">
+            <img src="../Images/hangingplant.png" alt="Philodendron heartleaf in hanging basket">
+        </div>
+        <div class="logo-desktop">
+            <a href="../index.html"><img src="../Images/Logo(1).png" alt="Logo of Leaf at Home"></a>
+        </div>
+        <div class="plantright">
+            <img src="../Images/plantvase.png" alt="Plant cutting in a black glass vase">
+        </div>
+    </div>
+    <section class="contact">
+        <h1> Contact Us</h1>
+        <form action="" method="post" id="contact-form">
+            <div class="column">
+                <label>
+                    Name* (minimum 5 characters):
+                    <input name="name" id="name"/>
+                </label>
+                <div class="form-err" id="name-error">Your name must be at least 5 characters</div>
+            </div>
+            <div class="column">
+                <label>
+                    Email*:
+                    <input name="email" id="email"/>
+                </label>
+                <div class="form-err" id="email-error">Please enter a valid email address</div>
+            </div>
+            <div class="column">
+                <label>
+                    Subject* (minimum 15 characters):
+                    <input name="subject" id="subject"/>
+                </label>
+                <div class="form-err" id="sub-error">Subject must be at least 15 characters long</div>
+            </div>
+            <div class="column">
+                <label>
+                    Message* (minimum 25 characters):
+                    <input name="message" id="message"/>
+                </label>
+                <div class="form-err" id="mess-error">Your message must be at least 25 characters long</div>
+            </div>
+            <input class="sub-btn" name="submit" type="submit"/>
+        </form>
+    </section>
+    <footer>
+        <section id="footer">
+            <div class="navigate">
+                <h2>Navigate</h2>
+                    <ul>
+                        <li><a href="../html/blogposts.html">Blog Posts</a></li>
+                        <li><a href="../html/contact.html">Contact</a></li>
+                        <li><a href="../html/about.html">About Us</a></li>
+                    </ul>
+            </div>
+            <div class="logo-foot">
+                <a href="../index.html"><img src="../Images/Logo footer.png" alt="Logo of Leaf at Home"></a>
+                <p class="copyright">© Leaf at Home 2023 </p>
+            </div>
+            <div class="follow">
+                <h2>Follow</h2>
+                    <img src="../Images/Pinterest - Negative.png" alt="Follow us on Pinterest" class="pint">
+                    <img src="../Images/Facebook - Negative(1).png" alt="Follow us on Facebook" class="face">
+                    <img src="../Images/Instagram - Negative(1).png" alt="Follow us on Instagram" class="insta">
+                    <img src="../Images/Snapchat - Negative(1).png" alt="Follow us on Snapchat" class="snap">
+            </div>
+        </section>
+    </footer>
+    <script src="../js/script.js"></script>
+    <script src="../js/contact.js" type="module"></script> 
+</body>
+</html>

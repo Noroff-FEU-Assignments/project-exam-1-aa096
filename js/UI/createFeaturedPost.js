@@ -5,7 +5,7 @@ featuredHolder.classList.add("featured-post");
 
 export function createFeaturedPost (plant) {
     const featuredLink = document.createElement("a");
-    featuredLink.href = "post.html?id=" + plant.id; 
+    featuredLink.href = "../html/post.html?id=" + plant.id; 
 
     const contentDiv = document.createElement("div");
     contentDiv.classList.add("text-div");

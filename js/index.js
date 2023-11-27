@@ -98,10 +98,9 @@ async function getPlants() {
         }
     }
 
-} 
-catch (error) {
-    showError(error.message, "#plants");
-}
+    } catch (error) {
+        showError(error.message, "#plants");
+    }
 }
 
 getPlants();

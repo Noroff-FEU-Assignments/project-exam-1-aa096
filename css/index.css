@@ -339,7 +339,7 @@ h3 {
     .upper .plantleft img {
         position: absolute;
         z-index: 999;
-        margin-top: 30px;
+        margin-top: 20px;
         left: -30px;
     }
 
@@ -389,11 +389,7 @@ h3 {
     }
 }
 
-@media (min-width: 790px) {
-    .upper .plantright img {
-        display: block;
-    }
-
+@media (min-width: 790px) { 
     #featured {
         margin: 57px;
     }
@@ -405,7 +401,11 @@ h3 {
 
     .more-btn {
         margin: 0 200px;
-      }
+    }
+
+    .upper .plantright img {
+        display: block;
+    }
 }
 
 @media (min-width: 1000px) {

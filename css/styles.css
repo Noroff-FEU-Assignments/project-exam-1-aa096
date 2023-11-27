@@ -87,11 +87,12 @@ h1, h2, h3, h4, h5 {
     display: flex;
     justify-content: space-around;
     background-color: #fff;
-    flex-direction: row;
     flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
 }
 
-h5 {
+.navigate h5, .navigate h2, .follow h5, .follow h2 {
     font-size: 35px;
     text-decoration: underline;
     color: #52604F;
@@ -105,7 +106,7 @@ h5 {
     align-items: center;
 }
 
-.navigate a, li {
+.navigate a, .navigate li {
     text-decoration: none;
     color: #52604F;
     list-style: none;
@@ -114,7 +115,7 @@ h5 {
     padding: 5px;
 }
 
-.navigate a:hover, li:hover {
+.navigate a:hover, .navigate li:hover, .nav-list a:hover {
     font-weight: bold;
     background-color: #B6CCC1;
 }
@@ -150,12 +151,9 @@ h5 {
     height: auto;
 }
 
-.follow h5 {
-    padding-bottom: 10px;
-}
-
 .follow img {
     padding-left: 5px;
+    padding-top: 10px;
 }
 
 @keyframes spin {
@@ -198,4 +196,21 @@ h5 {
         padding-top: 40px;
         display: block;
     }
+}
+
+@media (min-width: 750px) {
+    #footer {
+        display: flex;
+        justify-content: space-around;
+        background-color: #fff;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .follow {
+        margin-top: -60px;
+        padding-bottom: 10px;
+    }
+
 }

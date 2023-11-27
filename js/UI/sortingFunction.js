@@ -1,27 +1,23 @@
-import { getPost } from "../data/API.js";
+import { getPosts } from "../data/API.js";
+import { showLoadingIndicator } from "./UI/loadingIndicator.js";
+import { showError } from "./UI/errorMessage.js";
+import { createBlogPosts } from "./UI/createBlogPosts.js";
 
-let selectedCategory = '';
+const postHolder = document.getElementById("posts");
+const loadHolder = document.querySelector(".load-holder");
+const tagFilterDropdown = document.getElementById('tagFilter');
+const loadMoreBtn = document.createElement("button");
+
+let postsToShow = 10;
+let allPosts = [];
+let visablePosts = [];
 let selectedTag = '';
 
-const firstPost = allPosts[0];
-const tags = firstPost.tags;
+tagFilterDropdown.addEventListener('change', filterPosts);
 
-const tagFilterDropdown = document.getElementById('tagFilter');
-
-
-tags.forEach(tag => {
-    const option = document.createElement('option');
-    option.value = tag;
-    option.textContent = `Tag ${tag}`;
-    tagFilterDropdown.appendChild(option);
-});
-
-
-function filterPosts() {
-    selectedTag = tagFilterDropdown.value;
-
-    displayBlogPosts();
-}
+loadMoreBtn.classList.add("load-btn");
+loadMoreBtn.textContent = "Load More Posts";
+loadMoreBtn.addEventListener("click", loadMore);
 
 async function displayBlogPosts() {
     try {
@@ -32,7 +28,7 @@ async function displayBlogPosts() {
             allPosts = allPosts.filter(post => post.tags.includes(parseInt(selectedTag)));
         }
 
-        loadHolder.innerHTML = '';
+        loadHolder.innerHTML = "";
 
         visablePosts = allPosts.slice(0, postsToShow);
         visablePosts.forEach(post => {
@@ -49,6 +45,7 @@ async function displayBlogPosts() {
         showError(error.message, '#posts');
     }
 }
+
 async function loadMore() {
     const remainingPosts = allPosts.length - postsToShow;
 
@@ -62,6 +59,26 @@ async function loadMore() {
             buttonDiv.remove();
         }
     }
+    await displayBlogPosts();
 }
 
-displayBlogPosts();
+function filterPosts() {
+    selectedTag = tagFilterDropdown.value;
+    displayBlogPosts();
+}
+
+async function initializeTagFilter() {
+    const firstPost = await getPost(1); 
+    const tags = firstPost.tags;
+
+    tags.forEach(tag => {
+        const option = document.createElement('option');
+        option.value = tag;
+        option.textContent = `Tag ${tag}`;
+        tagFilterDropdown.appendChild(option);
+    });
+
+    displayBlogPosts();
+}
+
+initializeTagFilter();

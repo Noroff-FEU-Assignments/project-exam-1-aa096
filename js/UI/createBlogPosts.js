@@ -8,7 +8,7 @@ export function createBlogPosts(post) {
     cardDiv.classList.add("card");
 
     const blogLink = document.createElement("a");
-    blogLink.href = "post.html?id=" + post.id; 
+    blogLink.href = "../html/post.html?id=" + post.id; 
 
     const blogImg = document.createElement("img");
     blogImg.src = post.jetpack_featured_media_url;

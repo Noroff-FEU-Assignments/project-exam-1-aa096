@@ -12,7 +12,7 @@ export function CreateCareGuide (plant) {
     guide.classList.add("guide");
 
     const guideLink = document.createElement("a");
-    guideLink.href = "post.html?id=" + plant.id; 
+    guideLink.href = "../html/post.html?id=" + plant.id; 
 
     const guideImg = document.createElement("img");
     guideImg.src = plant.jetpack_featured_media_url;

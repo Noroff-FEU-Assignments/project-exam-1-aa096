@@ -15,6 +15,7 @@ loadMoreBtn.classList.add("load-btn");
 loadMoreBtn.textContent = "Load More Posts"
 loadMoreBtn.addEventListener("click", loadMore);
 
+
 async function displayBlogPosts() {
     try {
         showLoadingIndicator('.load-holder')

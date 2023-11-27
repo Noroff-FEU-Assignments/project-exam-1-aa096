@@ -14,7 +14,7 @@ export function createPostCards(post) {
     postCard.classList.add("card");
 
     const newestLink = document.createElement("a");
-    newestLink.href = "post.html?id=" + post.id; 
+    newestLink.href = "../html/post.html?id=" + post.id; 
 
     const postImg = document.createElement("img");
     postImg.src = post.jetpack_featured_media_url;

@@ -14,7 +14,7 @@ export function createPlantCard (plant) {
     plantCard.classList.add("plant-card");
 
     const plantLink = document.createElement("a");
-    plantLink.href = "post.html?id=" + plant.id; 
+    plantLink.href = "../html/post.html?id=" + plant.id; 
 
     const plantImg = document.createElement("img");
     plantImg.src = plant.jetpack_featured_media_url;

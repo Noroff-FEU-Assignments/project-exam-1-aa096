@@ -1,0 +1,117 @@
+.upper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.upper .logo-desktop img {
+    padding-top: 80px;
+    max-width: 200px;
+    height: auto; 
+}
+
+.upper .plantleft img {
+    max-width: 350px;
+    height: auto;
+    margin-top: -105px;
+}
+
+.upper .plantright img {
+    margin-top: 110px;
+    max-width: 300px;
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    right: -2px;
+    display: none;
+}
+
+.contact {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: -5px 40px 0;
+    flex-direction: column;
+
+}
+
+.form-err {
+    color: red;
+    font-weight: 500;
+    display: none;
+}
+
+.column label{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-bottom: 10px;
+    font-size: 15px;
+    font-weight: 400;
+    color: #52604F;
+}
+
+#contact-form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+
+input {
+    padding: 5px;
+}
+
+input#message {
+    padding: 30px;
+}
+
+.sub-btn {
+    background-color: #B6CCC1;
+    color: #52604F;
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+    border-radius: 0;
+    border-style: none;
+    height: 38px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 450;
+    margin: 10px 90px 30px 90px;
+}
+
+.sub-btn:hover {
+    background-color: #52604F;
+    color: #fff;
+}
+
+.sub-btn:disabled {
+    background-color: lightgrey;
+    color: #52604F;
+}
+
+@media (min-width: 600px) {
+    .upper .plantleft img {
+        position: absolute;
+        z-index: 999;
+        margin-top: -80px;
+        left: -30px;
+    }
+    .contact {
+        margin-top: 135px;
+    }
+}
+
+@media (min-width: 712px) {
+    .upper .plantleft img {
+        left: 10px;
+    }
+}
+
+
+@media (min-width: 790px) { 
+    .upper .plantright img {
+        display: block;
+    }
+    
+}
