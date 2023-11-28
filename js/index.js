@@ -64,10 +64,10 @@ previousBtn.addEventListener('click', () => {
     }
 });
 
-window.addEventListener("resize", () => {
-    responsivePosts();
-    renderLatestPosts(0);
-});
+// window.addEventListener("resize", () => {
+//     responsivePosts();
+//     renderLatestPosts(0);
+// });
 
 responsivePosts();
 renderLatestPosts(0);
