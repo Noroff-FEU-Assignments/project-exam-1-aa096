@@ -119,7 +119,7 @@
 #next-btn {
     cursor: pointer;
     background-color: #B6CCC1;
-    border-radius: 50%;
+    border-radius: 100%;
     border-color: transparent;
     font-size: 30px;
     color: #52604F;
@@ -129,7 +129,7 @@
 #prev-btn {
     cursor: pointer;
     background-color: #B6CCC1;
-    border-radius: 50%;
+    border-radius: 100%;
     border-color: transparent;
     font-size: 30px;
     color: #52604F;
