@@ -10,35 +10,72 @@
 }
 
 .upper .plantleft img {
-    max-width: 350px;
+    max-width: 300px;
     height: auto;
     margin-top: -105px;
 }
 
 .upper .plantright img {
-    margin-top: 110px;
-    max-width: 300px;
+    margin-top: 60px;
+    max-width: 290px;
     height: auto;
     z-index: 1;
     position: absolute;
-    right: -2px;
+    right: 5px;
     display: none;
 }
 
 .contact {
     background-color: #fff;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    margin: -5px 40px 0;
-    flex-direction: column;
+    margin: -5px 10px 30px 10px;
+    flex-wrap: wrap;
+}
 
+.form-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.find-us {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.find-us p {
+    font-size: 20px;
+    line-height: 0px;
+    color: #52604F;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .form-err {
-    color: red;
+    color: #af2020;
+    font-size: 14px;
     font-weight: 500;
     display: none;
+    text-align: center;
+    padding: 10px 0;
+    max-width: 300px;
+}
+
+#name-error, #email-error, #sub-error, #mess-error {
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
 }
 
 .column label{
@@ -46,21 +83,19 @@
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
-    padding-bottom: 10px;
+    align-items: center;
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 450;
     color: #52604F;
 }
+
 
 #contact-form {
     display: flex;
     justify-content: center;
     flex-direction: column;
     margin-top: 40px;
-}
-
-input {
-    padding: 5px;
+    max-width: 350px;
 }
 
 input#message {
@@ -73,11 +108,12 @@ input#message {
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
     border-radius: 0;
     border-style: none;
+    width: 200px;
     height: 38px;
     text-align: center;
     cursor: pointer;
     font-weight: 450;
-    margin: 10px 90px 30px 90px;
+    margin: auto;
 }
 
 .sub-btn:hover {
@@ -85,20 +121,97 @@ input#message {
     color: #fff;
 }
 
-.sub-btn:disabled {
-    background-color: lightgrey;
+legend {
+   text-transform: uppercase;
+   letter-spacing: 3px;
+   font-size: 25px;
+   font-weight: 600;
+   margin-bottom: -30px;
+   font-family: "NotoSerifDisplay", Verdana, Tahoma, sans-serif;
+}
+
+input, textarea {
+    width: 220px;
+    padding: 12px;
+    margin-bottom: 15px;
     color: #52604F;
 }
+
+textarea {
+    height: 200px;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    /* max-width: 320px; */
+    margin: auto;
+}
+
+.contact-p {
+    font-size: 18px;
+    padding: 0px 20px 20px 20px;
+    line-height: 35px;
+    text-align: center;
+    font-weight: 450;
+    color: #52604F;
+}
+
+input:focus, textarea:focus {
+    border-color: #B6CCC1;
+    outline: none;
+}
+
+h1 {
+    font-size: 30px;
+    text-align: center;
+}
+
+.bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 10px 10px;
+}
+
+.bottom img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 450px) {
+    .contact {
+        margin: -5px 40px 40px ;
+    }
+
+    .find-us p {
+        font-size: 25px;
+        line-height: 0px;
+        color: #52604F;
+        letter-spacing: 2px;
+    }
+}
+
 
 @media (min-width: 600px) {
     .upper .plantleft img {
         position: absolute;
         z-index: 999;
-        margin-top: -80px;
+        margin-top: -70px;
         left: -30px;
     }
     .contact {
-        margin-top: 135px;
+        margin-top: 70px;
+    }
+
+    input, textarea {
+        width: 350px;
+        padding: 12px;
+        margin-bottom: 15px;
+        color: #52604F;
     }
 }
 
@@ -114,4 +227,11 @@ input#message {
         display: block;
     }
     
+}
+
+
+@media (min-width: 846px) { 
+    .find-us {
+        margin-top: -100px;
+    }  
 }

@@ -85,6 +85,8 @@
     width: 240px;
     height: 304px;
     padding: 10px;
+    object-fit: cover;
+    object-position: 50% 50%;
 }
 
 .card-p {
@@ -264,7 +266,7 @@ h3 {
 }
 
 #care-guide img {
-    max-width: 300px;
+    width: 300px;
     height: auto;
 }
 
@@ -287,7 +289,7 @@ h3 {
     background-color: #fff;
     color: #52604F;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     position: absolute;
     margin-bottom: -180px;
     font-size: 16px;
@@ -306,6 +308,7 @@ h3 {
 
 .small-text {
     padding-bottom: 3px;
+    max-width: 500px;
 }
 
 @media (min-width: 450px) {
@@ -333,6 +336,11 @@ h3 {
     .extract-p {
        padding: 0 15px 0 15px;
     }
+    #care-guide img {
+        width: 400px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
 }
 
 @media (min-width: 600px) {
@@ -356,9 +364,11 @@ h3 {
         margin: 0 100px;
       }
 
-      #care-guide img {
-        max-width: 600px;
-        height: auto;
+    #care-guide img {
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+        object-position: 50% 50%;
     }
 
     .first-div {

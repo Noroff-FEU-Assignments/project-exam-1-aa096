@@ -38,11 +38,10 @@ function validateForm (event) {
         messageError.style.display = "block";
     }
 
-    if (checkLength(name.value, 4) && checkLength(subject.value, 14) && checkLength(message.value, 24) && validateEmail(email.value)) {
-        form.action = "https://aashild-rasmussen.no/wp-comments-post.php";
-        console.log("form validated");
+    if (checkLength(name.value,4) && validateEmail(email.value) && checkLength(subject.value, 14) && checkLength(message.value, 24)
+    ) {
+        window.location.href = "../html/thanks.html";
     }
 }
-
 
 form.addEventListener("submit", validateForm);

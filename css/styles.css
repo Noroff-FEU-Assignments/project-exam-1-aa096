@@ -64,7 +64,7 @@ h1, h2, h3, h4, h5 {
    margin-bottom: 20px;
  }
 
- .toggle-menu {
+.toggle-menu {
     cursor: pointer;
     display: flex;
     justify-content: space-between;
@@ -103,7 +103,9 @@ h1, h2, h3, h4, h5 {
 .navigate {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    order: 1;
 }
 
 .navigate a, .navigate li {
@@ -111,8 +113,9 @@ h1, h2, h3, h4, h5 {
     color: #52604F;
     list-style: none;
     text-transform: uppercase;
-    text-align: left;
-    padding: 5px;
+    text-align: center;
+    padding-bottom: 5px;
+    margin-right: 18px;
 }
 
 .navigate a:hover, .navigate li:hover, .nav-list a:hover {
@@ -144,11 +147,17 @@ h1, h2, h3, h4, h5 {
     justify-content: center;
     align-items: center;
     padding-top: 30px;
+    order: 3;
 }
 
 .logo-foot img {
-    max-width: 250px;
+    max-width: 200px;
     height: auto;
+    padding-top: 30px;
+}
+
+.follow {
+    order: 2;
 }
 
 .follow img {
@@ -211,6 +220,19 @@ h1, h2, h3, h4, h5 {
     .follow {
         margin-top: -60px;
         padding-bottom: 10px;
+        order: 3;
     }
 
+    .logo-foot {
+        order: 2;
+    }
+
+    .navigate {
+        order: 1;
+    }
+
+    .logo-foot img {
+        max-width: 250px;
+        height: auto;
+    }
 }

@@ -1,0 +1,56 @@
+.upper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.upper .logo-desktop img {
+    padding: 30px;
+    max-width: 200px;
+    height: auto; 
+}
+
+.about {
+    background-color: #FFF;
+    color: #52604F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 30px 30px;
+    text-align: center;
+}
+
+.container {
+    padding: 40px;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+h1, h2, h3 {
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+p, ol {
+    font-size: 18px;
+    word-spacing: 2px;
+    line-height: 30px;
+    font-weight: 450;
+}
+
+.bold {
+    font-size: 20px;
+    font-weight: 550;
+    text-transform: uppercase;
+}
+
+@media (min-width: 600px) {
+    .about {
+        margin: -5px 40px 40px ;
+    }
+}
