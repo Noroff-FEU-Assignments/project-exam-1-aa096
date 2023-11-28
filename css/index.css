@@ -292,6 +292,10 @@ h3 {
     background-color: #fff;
     color: #52604F;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 10px;
     position: absolute;
     margin-bottom: -180px;
