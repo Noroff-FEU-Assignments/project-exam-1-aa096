@@ -119,8 +119,9 @@
 #next-btn {
     cursor: pointer;
     background-color: #B6CCC1;
-    border-radius: 100%;
+    border-radius: 50%;
     border-color: transparent;
+    padding: 5px;
     font-size: 30px;
     color: #52604F;
     order: 2;
@@ -129,9 +130,10 @@
 #prev-btn {
     cursor: pointer;
     background-color: #B6CCC1;
-    border-radius: 100%;
+    border-radius: 50%;
     border-color: transparent;
     font-size: 30px;
+    padding: 5px;
     color: #52604F;
     order: 1;
 }
