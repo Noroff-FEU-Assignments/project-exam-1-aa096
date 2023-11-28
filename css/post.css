@@ -56,14 +56,6 @@ h1 {
    line-height: 35px;
 }
 
-.text-img p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
- }
-
 .text-img img {
     max-width: 250px;
     height: auto;
@@ -136,6 +128,10 @@ figure {
         font-size: 40px;
         margin-bottom: 5px;
     }   
+
+    .text-img {
+        max-width: 600;
+     }
 }
 
 @media (min-width: 712px) {
