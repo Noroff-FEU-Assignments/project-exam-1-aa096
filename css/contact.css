@@ -146,7 +146,6 @@ textarea {
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
-    /* max-width: 320px; */
     margin: auto;
 }
 
