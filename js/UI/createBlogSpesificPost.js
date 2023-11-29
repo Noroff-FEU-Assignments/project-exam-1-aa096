@@ -24,4 +24,40 @@ export function createSpesificPost (result) {
     blogHolder.appendChild(textAndImg);
     textAndImg.appendChild(content); 
     textAndImg.appendChild(featuredImg);
+
+    featuredImg.addEventListener("click", openModal);
+    const contentImages = textAndImg.querySelectorAll("img");
+    contentImages.forEach(img => {
+        img.addEventListener("click", openModal);
+    });
 }
+
+function openModal (event) {
+    const modalContainer = document.createElement("div");
+    modalContainer.classList.add ("modal-container");
+
+    const modalContent = document.createElement("img");
+    modalContent.src = event.target.src;
+    modalContent.alt = event.target.alt;
+    modalContent.classList.add("modal-content");
+
+    if (event.target.tagName === 'IMG') {
+        modalContent.src = event.target.src;
+        modalContent.alt = event.target.alt;
+    } else {
+        modalContent.src = event.target.querySelector('img').src;
+        modalContent.alt = event.target.querySelector('img').alt;
+    }
+
+    modalContainer.appendChild(modalContent);
+    
+    document.body.appendChild(modalContainer);
+}
+
+function closeModal(event) {
+    if (event.target.classList.contains("modal-container")) {
+        event.target.remove();
+    }
+}
+
+document.body.addEventListener("click", closeModal);

@@ -65,4 +65,3 @@ async function loadMore() {
 }
 
 displayBlogPosts();
-

@@ -104,3 +104,10 @@ async function getPlants() {
 }
 
 getPlants();
+
+
+
+const filterTag = plant.filter(function(plant) {
+    return plant.tags == "25";
+});
+console.log(filterTag);
