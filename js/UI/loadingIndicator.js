@@ -1,12 +1,10 @@
-export function showLoadingIndicator(target) {
-    const loaderPlace = document.querySelector(target);
-
+export function showLoadingIndicator() {
     const loaderDiv = document.createElement("div");
     loaderDiv.classList.add("loader-div");
 
     const spinner = document.createElement("div");
     spinner.classList.add("loader");
 
-    loaderPlace.appendChild(loaderDiv);
+    document.body.appendChild(loaderDiv);
     loaderDiv.appendChild(spinner);
 }

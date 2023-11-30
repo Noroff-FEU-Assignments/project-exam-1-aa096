@@ -6,7 +6,6 @@ import { createPlantCard } from "./UI/createPlantCard.js";
 import { createFeaturedPost } from "./UI/createFeaturedPost.js";
 import { CreateCareGuide } from "./UI/createCareGuide.js";
 
-const loaderHere = document.querySelector(".loader-here");
 const nextBtn = document.querySelector("#next-btn");
 const previousBtn = document.querySelector("#prev-btn");
 const postsDiv = document.querySelector(".posts-holder");
@@ -30,10 +29,7 @@ function responsivePosts () {
 
 async function renderLatestPosts(startIndex) {
     try { 
-        showLoadingIndicator(".loader-here");
         latest = await getPosts();
- 
-        loaderHere.innerHTML = "";
 
         postsDiv.innerHTML = "";
         
@@ -73,14 +69,9 @@ responsivePosts();
 renderLatestPosts(0);
 
 
-const plantDiv = document.querySelector("#plants");
-
 async function getPlants() {
     try { 
-        showLoadingIndicator("#plants")
         const plants = await getPosts();
- 
-        plantDiv.innerHTML ="";
 
     for (let i = 0; i < plants.length; i++) {
         const plant = plants[i];
