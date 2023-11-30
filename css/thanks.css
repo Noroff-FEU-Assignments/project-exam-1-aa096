@@ -12,11 +12,11 @@
 .upper .plantleft img {
     max-width: 300px;
     height: auto;
-    margin-top: -105px;
+    margin-top: -85px;
 }
 
 .upper .plantright img {
-    margin-top: 60px;
+    margin-top: 80px;
     max-width: 290px;
     height: auto;
     z-index: 1;
@@ -75,12 +75,12 @@ h1 {
     .upper .plantleft img {
         position: absolute;
         z-index: 999;
-        margin-top: -70px;
+        margin-top: -48px;
         left: -30px;
     }
 
     .contact {
-        margin-top: 70px;
+        margin-top: 20px;
     }
 }
 

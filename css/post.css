@@ -65,6 +65,7 @@ h1 {
    display: flex;
    flex-wrap: wrap;
    width: 250px;
+   font-size: 18px;
 }
 
 .content-p li {
@@ -137,7 +138,6 @@ figure {
         max-width: 350px;
         height: auto;
     }
-
 }
 
 @media (min-width: 600px) {
@@ -154,6 +154,10 @@ figure {
 
     .text-img {
         max-width: 600;
+     }
+
+     .content-p {
+        font-size: 20px;
      }
 }
 

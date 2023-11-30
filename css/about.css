@@ -1,12 +1,17 @@
 .upper {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 10px;
 }
 
 .upper .logo-desktop img {
-    padding: 30px;
+    padding-top: 30px;
     max-width: 200px;
     height: auto; 
+}
+
+.tag {
+    font-size: 15px;
 }
 
 .about {

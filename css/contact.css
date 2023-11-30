@@ -10,13 +10,13 @@
 }
 
 .upper .plantleft img {
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
-    margin-top: -105px;
+    margin-top: -3px;
 }
 
 .upper .plantright img {
-    margin-top: 60px;
+    margin-top: 80px;
     max-width: 290px;
     height: auto;
     z-index: 1;
@@ -49,11 +49,13 @@
     align-items: center;
 }
 
-.find-us p {
+.find-us p, .tel a {
     font-size: 20px;
     line-height: 0px;
     color: #52604F;
     letter-spacing: 2px;
+    text-decoration: none;
+
 }
 
 h2 {
@@ -199,11 +201,11 @@ h1 {
     .upper .plantleft img {
         position: absolute;
         z-index: 999;
-        margin-top: -70px;
-        left: -30px;
+        margin-top: 23px;
+        left: 10px;
     }
     .contact {
-        margin-top: 70px;
+        margin-top: 30px;
     }
 
     input, textarea {
@@ -216,7 +218,7 @@ h1 {
 
 @media (min-width: 712px) {
     .upper .plantleft img {
-        left: 10px;
+        left: 90px;
     }
 }
 

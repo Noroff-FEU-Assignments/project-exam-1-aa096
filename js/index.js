@@ -64,10 +64,10 @@ previousBtn.addEventListener('click', () => {
     }
 });
 
-// window.addEventListener("resize", () => {
-//     responsivePosts();
-//     renderLatestPosts(0);
-// });
+window.addEventListener("resize", () => {
+    responsivePosts();
+    renderLatestPosts(0);
+});
 
 responsivePosts();
 renderLatestPosts(0);
@@ -104,10 +104,3 @@ async function getPlants() {
 }
 
 getPlants();
-
-
-
-const filterTag = plant.filter(function(plant) {
-    return plant.tags == "25";
-});
-console.log(filterTag);
