@@ -1,5 +1,4 @@
 import { showError } from "./UI/errorMessage.js";
-import { showLoadingIndicator } from "./UI/loadingIndicator.js";
 import { createSpesificPost } from "./UI/createBlogSpesificPost.js";
 
 
@@ -14,7 +13,6 @@ const url = "https://aashild-rasmussen.no/wp-json/wp/v2/posts/"+ id;
 
 async function getPost() {
     try { 
-        showLoadingIndicator ("#post-container");
         const response = await fetch(url);
 
         if (!response.ok) {

@@ -94,7 +94,7 @@
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
     text-transform: uppercase;
     font-size: 18px;
-    color: #52604F;
+    color: #31372F;
     font-weight: 400;
     text-align: center;
 }
@@ -124,7 +124,7 @@
     border-color: transparent;
     padding: 5px;
     font-size: 30px;
-    color: #52604F;
+    color: #31372F;
     order: 2;
 }
 
@@ -135,7 +135,7 @@
     border-color: transparent;
     font-size: 30px;
     padding: 5px;
-    color: #52604F;
+    color: #31372F;
     order: 1;
 }
 
@@ -162,7 +162,7 @@
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
     text-transform: uppercase;
     font-size: 25px;
-    color: #52604F;
+    color: #31372F;
     font-weight: 400;
     text-align: center;
 }
@@ -240,7 +240,7 @@ h3 {
 
 .more-btn {
     background-color: #B6CCC1;
-    color: #52604F;
+    color: #31372F;
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
     border-radius: 0;
     border-style: none;

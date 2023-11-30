@@ -18,10 +18,7 @@ loadMoreBtn.addEventListener("click", loadMore);
 
 async function displayBlogPosts() {
     try {
-        showLoadingIndicator('.load-holder')
         allPosts = await getPosts();
-        
-        loadHolder.innerHTML = "";
 
         visablePosts = allPosts.slice(0, postsToShow);
         visablePosts.forEach(post => {

@@ -72,19 +72,6 @@ h1, h2, h3, h4, h5 {
     justify-content: space-between;
 }
 
-.dropdown {
-    flex-direction: column;
-    position: absolute;
-    background-color: rgba(255, 255, 255, 1);
-    position: absolute;
-    top: 100%;
-    left: 36%;
-    transform: translate(-50%);
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    /* display: none; */
-}
-
 #active {
     text-decoration: underline;
 }
@@ -145,11 +132,18 @@ h1, h2, h3, h4, h5 {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 .loader {
     border: 16px solid #B6CCC1; 
     border-top: 16px solid #52604F; 
+    background-color: #fff;
     background-image: url(../Images/Leaf.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -157,7 +151,6 @@ h1, h2, h3, h4, h5 {
     width: 100px;
     height: 100px;
     animation: spin 2s linear infinite;
-    position: absolute;
 }
 
 .logo-foot {

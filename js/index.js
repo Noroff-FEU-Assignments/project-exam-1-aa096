@@ -1,6 +1,5 @@
 import { showError } from "./UI/errorMessage.js"; 
 import { getPosts } from "./data/API.js";
-import { showLoadingIndicator } from "./UI/loadingIndicator.js";
 import { createPostCards } from "./UI/createPostCards.js";
 import { createPlantCard } from "./UI/createPlantCard.js";
 import { createFeaturedPost } from "./UI/createFeaturedPost.js";
@@ -27,13 +26,15 @@ function responsivePosts () {
     }
 }
 
-async function renderLatestPosts(startIndex) {
+async function renderLatestPosts() {
     try { 
         latest = await getPosts();
 
+        const latestPosts = latest.slice(0, 9);
+
         postsDiv.innerHTML = "";
         
-        for (let i = startIndex; i < startIndex + postPerPage && i < latest.length; i++) {
+        for (let i = currentIndex; i < currentIndex + postPerPage && i < latestPosts.length; i++) {
             const post = latest[i];
             createPostCards(post);
         }
@@ -43,20 +44,23 @@ async function renderLatestPosts(startIndex) {
     } catch (error) {
         showError(error.message,"#posts");
     }
+
+    // nextBtn.diabled = currentIndex + postPerPage >= latestPosts.length;
 }
+
 
 
 nextBtn.addEventListener('click', () => {
     if (currentIndex + postPerPage < latest.length) {
         currentIndex += postPerPage;
-        renderLatestPosts(currentIndex);
+        renderLatestPosts();
     }
 });
 
 previousBtn.addEventListener('click', () => {
-    if (currentIndex - postPerPage >= 0) {
+    if (currentIndex > 0) {
         currentIndex -= postPerPage;
-        renderLatestPosts(currentIndex);
+        renderLatestPosts();
     }
 });
 
