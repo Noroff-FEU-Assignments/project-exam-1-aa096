@@ -34,7 +34,6 @@
 
 .post-div {
     display: flex;
-    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     padding: 40px;
@@ -53,7 +52,7 @@ h1 {
    flex-wrap: wrap;
    font-size: 22px;
    word-spacing: 2px;
-   line-height: 35px;
+   line-height: 30px;
 }
 
 .text-img img {
@@ -65,7 +64,7 @@ h1 {
    display: flex;
    flex-wrap: wrap;
    width: 250px;
-   font-size: 18px;
+   font-size: 16px;
 }
 
 .content-p li {
@@ -77,7 +76,10 @@ h1 {
 }
 
 .wp-block-heading {
-    font-size: 25px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+    font-weight: 400;
     text-align: center;
     display: flex;
     flex-wrap: wrap;
@@ -158,6 +160,11 @@ figure {
 
      .content-p {
         font-size: 20px;
+        max-width: 700px;
+     }
+
+     .text-img {
+       line-height: 35px;
      }
 }
 
@@ -190,7 +197,12 @@ figure {
         word-spacing: 2px;
      }
 
-     .text-img img {
+    .post-div {
+        justify-content: center;
+    }
+        
+
+    .text-img img {
         max-width: 400px;
         height: auto;
     }

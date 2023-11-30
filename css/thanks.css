@@ -10,13 +10,13 @@
 }
 
 .upper .plantleft img {
-    max-width: 300px;
+    max-width: 200px;
     height: auto;
-    margin-top: -85px;
+    margin-top: -3px;
 }
 
 .upper .plantright img {
-    margin-top: 80px;
+    margin-top: 95px;
     max-width: 290px;
     height: auto;
     z-index: 1;
@@ -71,12 +71,16 @@ h1 {
     font-weight: 400;
 }
 
+.tagline {
+    padding: 20px 0 0px 0;
+}
+
 @media (min-width: 600px) {
     .upper .plantleft img {
         position: absolute;
         z-index: 999;
-        margin-top: -48px;
-        left: -30px;
+        margin-top: 29px;
+        left: 10px;
     }
 
     .contact {

@@ -15,6 +15,7 @@ body {
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
     color: #52604F;
     min-height: 100vh;
+    font-size: 16px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -177,6 +178,10 @@ h1, h2, h3, h4, h5 {
     padding-top: 10px;
 }
 
+.tagline {
+    font-size: 15px;
+}
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -190,6 +195,10 @@ h1, h2, h3, h4, h5 {
 @media (min-width: 600px) {
     .toggle-menu {
         display: none;
+    }
+
+    body {
+        font-size: 18px;
     }
 
     .nav-list {

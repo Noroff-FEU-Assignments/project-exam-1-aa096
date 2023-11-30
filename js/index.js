@@ -26,51 +26,53 @@ function responsivePosts () {
     }
 }
 
-async function renderLatestPosts() {
-    try { 
-        latest = await getPosts();
-
-        const latestPosts = latest.slice(0, 9);
-
-        postsDiv.innerHTML = "";
+function renderLatestPosts() {
+    postsDiv.innerHTML = "";
+    const latestPosts = latest.slice(0, 13);
         
-        for (let i = currentIndex; i < currentIndex + postPerPage && i < latestPosts.length; i++) {
-            const post = latest[i];
-            createPostCards(post);
-        }
-        
-        carouselWrap.appendChild(nextBtn);
-
-    } catch (error) {
-        showError(error.message,"#posts");
+    for (let i = currentIndex; i < currentIndex + postPerPage && i < latestPosts.length; i++) {
+        const post = latest[i];
+        createPostCards(post);
     }
+        
+    carouselWrap.appendChild(nextBtn);
 
-    // nextBtn.diabled = currentIndex + postPerPage >= latestPosts.length;
+    nextBtn.disabled = currentIndex + postPerPage >= latestPosts.length;
 }
 
+document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        latest = await getPosts();
 
-
-nextBtn.addEventListener('click', () => {
-    if (currentIndex + postPerPage < latest.length) {
-        currentIndex += postPerPage;
+        responsivePosts();
         renderLatestPosts();
+
+        nextBtn.addEventListener('click', () => {
+            if (currentIndex + postPerPage < latest.length) {
+                currentIndex += postPerPage;
+                renderLatestPosts();
+            }
+        });
+        
+        previousBtn.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex -= postPerPage;
+                renderLatestPosts();
+            }
+        });
+        
+        window.addEventListener("resize", () => {
+            responsivePosts();
+            renderLatestPosts(0);
+        });
+        
+
+    } catch (error) {
+        showError (error.message, ".posts-holder");
     }
-});
+})
 
-previousBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex -= postPerPage;
-        renderLatestPosts();
-    }
-});
 
-window.addEventListener("resize", () => {
-    responsivePosts();
-    renderLatestPosts(0);
-});
-
-responsivePosts();
-renderLatestPosts(0);
 
 
 async function getPlants() {

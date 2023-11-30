@@ -28,6 +28,12 @@
     padding: 40px;
 }
 
+.container p, .container li {
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+}
+
 .container img {
     max-width: 100%;
     height: auto;
@@ -57,5 +63,12 @@ p, ol {
 @media (min-width: 600px) {
     .about {
         margin: -5px 40px 40px ;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container img {
+        max-width: 900px;
+        height: auto;
     }
 }

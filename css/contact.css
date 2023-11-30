@@ -4,7 +4,7 @@
 }
 
 .upper .logo-desktop img {
-    padding-top: 80px;
+    padding-top: 50px;
     max-width: 200px;
     height: auto; 
 }
@@ -16,7 +16,7 @@
 }
 
 .upper .plantright img {
-    margin-top: 80px;
+    margin-top: 95px;
     max-width: 290px;
     height: auto;
     z-index: 1;
@@ -27,11 +27,11 @@
 
 .contact {
     background-color: #fff;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;  */
     margin: -5px 10px 30px 10px;
-    flex-wrap: wrap;
+    /* flex-direction: column; */
 }
 
 .form-div {
@@ -91,7 +91,6 @@ h2 {
     color: #52604F;
 }
 
-
 #contact-form {
     display: flex;
     justify-content: center;
@@ -106,7 +105,7 @@ input#message {
 
 .sub-btn {
     background-color: #B6CCC1;
-    color: #52604F;
+    color: #31372F;
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
     border-radius: 0;
     border-style: none;
@@ -151,13 +150,22 @@ textarea {
     margin: auto;
 }
 
+.contact-txt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
 .contact-p {
     font-size: 18px;
-    padding: 0px 20px 20px 20px;
+    padding: 0px 20px 40px 20px;
     line-height: 35px;
     text-align: center;
     font-weight: 450;
     color: #52604F;
+    max-width: 700px;
 }
 
 input:focus, textarea:focus {
@@ -183,9 +191,22 @@ h1 {
     height: auto;
 }
 
+.tagline {
+    padding: 20px 0 ;
+}
+
+.row {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
 @media (min-width: 450px) {
     .contact {
-        margin: -5px 40px 40px ;
+        margin: -5px 40px 40px;
+        padding-bottom: 5px;
     }
 
     .find-us p {
@@ -201,7 +222,7 @@ h1 {
     .upper .plantleft img {
         position: absolute;
         z-index: 999;
-        margin-top: 23px;
+        margin-top: 29px;
         left: 10px;
     }
     .contact {
@@ -229,7 +250,6 @@ h1 {
     }
     
 }
-
 
 @media (min-width: 846px) { 
     .find-us {

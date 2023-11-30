@@ -122,7 +122,7 @@
     background-color: #B6CCC1;
     border-radius: 50%;
     border-color: transparent;
-    padding: 5px;
+    padding: 6px;
     font-size: 30px;
     color: #31372F;
     order: 2;
@@ -134,7 +134,7 @@
     border-radius: 50%;
     border-color: transparent;
     font-size: 30px;
-    padding: 5px;
+    padding: 6px;
     color: #31372F;
     order: 1;
 }
@@ -228,7 +228,7 @@
 }
 
 h3 {
-    font-size: 35px;
+    font-size: 30px;
     margin-bottom: 0px;
     font-weight: 450;
 }
@@ -236,6 +236,7 @@ h3 {
 .heading-p {
     text-transform: uppercase;
     margin-bottom: -10px;
+    font-size: 18px;
 }
 
 .more-btn {
@@ -255,7 +256,8 @@ h3 {
 .extract-p {
     text-align: center;
     padding: 0 10px 10px 10px;
- }
+    font-size: 16px;
+}
 
 .more-btn:hover {
     background-color: #52604F;
@@ -300,7 +302,7 @@ h3 {
     padding: 5px;
     position: absolute;
     font-size: 16px;
-    margin: 0 50px -180px 20px;
+    margin: 0 20px -180px 0px;
 }
 
 .guide a {
@@ -432,6 +434,8 @@ h3 {
 
     .extract-p {
         max-width: 560px;
+        font-size: 18px;
+
     }
 
      #featured img {
@@ -451,10 +455,6 @@ h3 {
         align-items: center;
         justify-content: space-evenly;
     }    
-
-    .extract-p {
-        max-width: 560px;
-    }
 
      #featured img {
         max-width: 350px;
