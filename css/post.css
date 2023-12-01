@@ -4,8 +4,7 @@
 }
 
 .upper .logo-desktop img {
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 0 20px;
     max-width: 200px;
     height: auto; 
     text-align: center;
@@ -46,10 +45,9 @@ h1 {
 
 .text-img {
    display: flex;
-   flex-direction: column;
    justify-content: center;
    align-items: center;
-   flex-wrap: wrap;
+   flex-flow: column wrap;
    font-size: 22px;
    word-spacing: 2px;
    line-height: 30px;
@@ -63,7 +61,6 @@ h1 {
 .content-p {
    display: flex;
    flex-wrap: wrap;
-   width: 250px;
    font-size: 16px;
 }
 
@@ -75,17 +72,18 @@ h1 {
     font-weight: 500;
 }
 
+.wp-block-group___inner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 .wp-block-heading {
-    font-size: 18px;
+    font-size: 20px;
     text-transform: uppercase;
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
     font-weight: 400;
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
 }
 
 figure {
@@ -93,12 +91,23 @@ figure {
     margin: 0 auto;
 }
 
+.wp-block-image img{
+    max-width: 100%;
+    height: auto;
+}
+
 .wp-element-caption {
+    text-align: center;
     max-width: 200px;
     font-size: 16px;
     line-height: 20px;
     font-weight: 500;
     padding-bottom: 20px;
+}
+
+.has-text-align-center {
+    text-align: center;
+    margin: auto;
 }
 
 .modal-container {
@@ -126,19 +135,15 @@ figure {
 
 @media (min-width: 500px) {
     .content-p {
-        display: flex;
-        flex-wrap: wrap;
         width: auto;
-     }
+    }
 
      #post-container {
-        background-color: #fff;
         margin: 20px 40px;
     }
     
     .text-img img {
         max-width: 350px;
-        height: auto;
     }
 }
 
@@ -149,9 +154,9 @@ figure {
         margin-top: 30px;
         left: -30px;
     }
+
     h1 {
         font-size: 40px;
-        margin-bottom: 5px;
     }   
 
     .text-img {
@@ -181,20 +186,20 @@ figure {
 
     .text-img img {
         max-width: 600px;
+    }
+
+    .wp-block-image img{
+        max-width: 400px;
         height: auto;
     }
 }
 
 @media (min-width: 1100px) {
     .text-img {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        flex-flow: row nowrap;
         align-items:start;
-        flex-wrap: nowrap;
         font-size: 20px;
         padding: 40px;
-        word-spacing: 2px;
      }
 
     .post-div {
@@ -204,7 +209,6 @@ figure {
 
     .text-img img {
         max-width: 400px;
-        height: auto;
     }
 
     p {

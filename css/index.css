@@ -4,8 +4,7 @@
 }
 
 .upper .logo-desktop img {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0; 
     max-width: 200px;
     height: auto; 
 }
@@ -148,8 +147,7 @@
 #plants {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
 }
 
 .plant-h2 {
@@ -173,9 +171,8 @@
 
 .plant-holder {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    flex-direction: row;
+    flex-flow: row wrap;
     gap: 20px;
 } 
 
@@ -210,8 +207,7 @@
 #featured img {
     max-width: 300px;
     height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 
 .featured-post a {
@@ -222,8 +218,7 @@
 .text-div {
     display: flex;
     justify-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
+    flex-flow: wrap column;
     font-size: 20px;
 }
 
@@ -235,7 +230,7 @@ h3 {
 
 .heading-p {
     text-transform: uppercase;
-    margin-bottom: -10px;
+    margin-bottom: -20px;
     font-size: 18px;
 }
 
@@ -250,7 +245,7 @@ h3 {
     text-align: center;
     cursor: pointer;
     font-weight: bold;
-    margin: -10px 90px 30px 90px;
+    margin: -10px 90px 10px 90px;
 }
 
 .extract-p {
@@ -285,8 +280,7 @@ h3 {
     display: flex;
     justify-content:center;
     align-items: center;
-    flex-wrap: wrap;
-    flex-direction: row;
+    flex-flow: row wrap;
     gap: 200px;
     margin-bottom: 200px;
 }
@@ -302,7 +296,7 @@ h3 {
     padding: 5px;
     position: absolute;
     font-size: 16px;
-    margin: 0 20px -180px 0px;
+    margin: 0 20px -155px 0px;
 }
 
 .guide a {
@@ -330,6 +324,7 @@ h3 {
     .posts-holder {
         order: 2;
     }
+
     #prev-btn {
         order: 1;
     }
@@ -341,6 +336,7 @@ h3 {
     .extract-p {
        padding: 0 15px 0 15px;
     }
+
     #care-guide img {
         width: 400px;
         object-fit: cover;
@@ -367,31 +363,19 @@ h3 {
 
     .more-btn {
         margin: 0 100px;
-      }
-
-    #care-guide img {
-        width: 600px;
-        height: 400px;
-        object-fit: cover;
-        object-position: 50% 50%;
     }
 
     .first-div {
-        display: flex;
-        justify-content:center;
-        align-items: center;
-        flex-wrap: wrap;
-        flex-direction: row;
         gap: 100px;
     }
     
     .guide-holder {
-        background-color: #fff;
-        color: #52604F;
-        text-align: center;
         padding: 15px;
-        position: absolute;
-        margin: 0 20px -90px 20px;
+        margin: 0 20px -160px 20px;
+    }
+
+    .guide {
+        margin-bottom: 90px;
     }
 }
 
@@ -421,66 +405,60 @@ h3 {
     .upper .plantright img {
         display: block;
     }
+
+    #care-guide img {
+        width: 600px;
+        height: 400px;
+        object-fit: cover;
+        object-position: 50% 50%;
+    }
 }
 
 @media (min-width: 1000px) {
     .featured-post {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
+        justify-content: center;
     }    
 
     .extract-p {
         max-width: 560px;
         font-size: 18px;
-
     }
 
      #featured img {
         max-width: 290px;
-        height: auto;
-        margin-top: 0px;
-        margin-right: -16px;
-        margin-bottom: 0px;
+        margin: 20px 0 0 0; 
+    }
+}
+
+@media (min-width: 1010px) {
+    .featured-post {
+        justify-content: space-around;
+    }   
+
+     #featured img {
+        max-width: 290px;
+        margin: 0; 
     }
 }
 
 @media (min-width: 1100px) {
     .featured-post {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
         justify-content: space-evenly;
     }    
 
      #featured img {
         max-width: 350px;
-        height: auto;
-        margin-top: 0px;
-        margin-right: -100px;
+        margin: 0px;
     }
 }
 
-@media (min-width: 1300px) {
-    .featured-post {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-evenly;
-    }    
-
+@media (min-width: 1300px) { 
     .extract-p {
         max-width: 590px;
         padding: 0 20px 0 20px;
      }
 
      #featured img {
-        margin-top: 0px;
-        margin-right: -40px;
         max-width: 500px;
     }
 }

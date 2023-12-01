@@ -33,7 +33,7 @@ async function getPost() {
 
 function getTitle (result) {
     const titleContainer = document.getElementById("title");    
-    titleContainer.textContent = result.title.rendered;
+    titleContainer.textContent = result.title.rendered + " | Leaf at Home";
 }
 
 getPost();

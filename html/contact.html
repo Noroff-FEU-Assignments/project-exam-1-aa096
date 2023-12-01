@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us | Leaf at Home</title>
+    <meta name="description" content="Discover expert plant care tips and botanical inspiration on Leaf at Home. Nurturing your indoor oasis with insightful blog posts. Explore our contact page and learn more about us.">
+    <title>Contact Us for Expert Plant Care Tips | Leaf at Home</title>
     <!-- Hotjar Tracking Code for Exam Project -->
     <script>
         (function(h,o,t,j,a,r){
@@ -19,41 +20,46 @@
     <link href="../css/contact.css" rel="stylesheet">
 </head>
 <body>
-    <div class="navbar">
-        <div class="toggle-menu" id="hamburger">
-            <div class="hamburger-icon">
+    <nav>
+        <div class="nav-icons">
+            <div class="toggle-menu" id="hamburger">
+                <div class="hamburger-icon">
+                </div>
+                <a href="../index.html"><img src="../Images/Logomobile.png" alt="logo of Leaf at Home in green" class="logo-mobile"></a>
+                <div></div>
+                </div>
             </div>
-            <a href="../index.html"><img src="../Images/Logomobile.png" alt="logo of Leaf at Home in green" class="logo-mobile"></a>
-            <div></div>
+            <ul class="menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../html/blogposts.html">Blog Posts</a></li>
+                <li><a href="../html/contact.html" id="active">Contact</a></li>
+                <li><a href="../html/about.html">About Us</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="upper">
+            <div class="plantleft">
+                <img src="../Images/hangingplant.png" alt="hand holding Monstera leaf">
+            </div>
+            <div class="logo-desktop">
+                <a href="../index.html"><img src="../Images/Logo(1).png" alt="Logo of Leaf at Home"></a>
+                <p class="tagline">The Houseplant Blog for Growing your Indoor Green Paradise</p>
+            </div>
+            <div class="plantright">
+                <img src="../Images/plantvase.png" alt="Plant cutting in a black glass vase">
             </div>
         </div>
-        <ul class="nav-list">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../html/blogposts.html">Blog Posts</a></li>
-            <li><a href="../html/contact.html" id="active">Contact</a></li>
-            <li><a href="../html/about.html">About Us</a></li>
-        </ul>
-    </div>
-    <div class="upper">
-        <div class="plantleft">
-            <img src="../Images/hangingplant.png" alt="hand holding Monstera leaf">
-        </div>
-        <div class="logo-desktop">
-            <a href="../index.html"><img src="../Images/Logo(1).png" alt="Logo of Leaf at Home"></a>
-            <p class="tagline">The Houseplant Blog for Growing your Indoor Green Paradise</p>
-        </div>
-        <div class="plantright">
-            <img src="../Images/plantvase.png" alt="Plant cutting in a black glass vase">
-        </div>
-    </div>
-    <section class="contact">
-        <div class="contact-txt">
-            <h1>Got a leafy project in mind?</h1>
-            <p class="contact-p"> Whether you're diving into the world of indoor gardening, tackling a plant-related challenge, or just want to chat about your favorite green companions, we're all ears! Let's team up and cultivate fantastic spaces together. Reach out to us by completing the contact form, or shoot us an email. We promise to respond before our morning coffee kicks in.</p>
-        </div>
-        <div class="row">
-            <div class="form-div">
-                <legend>Send us a Message</legend>
+    </header>
+    <main>
+        <section class="contact">
+            <div class="contact-txt">
+                <h1>Got a leafy project in mind?</h1>
+                <p class="contact-p"> Whether you're diving into the world of indoor gardening, tackling a plant-related challenge, or just want to chat about your favorite green companions, we're all ears! Let's team up and cultivate fantastic spaces together. Reach out to us by completing the contact form, or shoot us an email. We promise to respond before our morning coffee kicks in.</p>
+            </div>
+            <div class="row">
+                <div class="form-div">
+                    <legend>Send us a Message</legend>
                     <form action="" method="post" id="contact-form">
                         <div class="column">
                             <label>
@@ -85,30 +91,31 @@
                         </div>
                         <input class="sub-btn" name="submit" type="submit"/>
                     </form>
-            </div>
-            <div class="find-us">
-                <h2>Visit Us</h2>
+                </div>
+                <div class="find-us">
+                    <h2>Visit Us</h2>
                     <p>Plant City</p>
                     <p>Florida, USA</p>
-                <h2>Call Us</h2>
+                    <h2>Call Us</h2>
                     <p class="tel">+47 000 00 000</p>
-                <h2>Email:</h2>
-                <p>contact@leafathome.com</p>
+                    <h2>Email:</h2>
+                    <p>contact@leafathome.com</p>
+                </div>
             </div>
-        </div>
             <div class="bottom">
-            <img src="../Images/green-leaves.jpg" alt="Green tropical leaves covering the whole Image">
-        </div>
-    </section>
+                <img src="../Images/green-leaves.jpg" alt="Green tropical leaves covering the whole Image">
+            </div>
+        </section>
+    </main>
     <footer>
-        <section id="footer">
+        <section class="bottom-nav">
             <div class="navigate">
                 <h2>Navigate</h2>
-                    <ul>
-                        <li><a href="../html/blogposts.html">Blog Posts</a></li>
-                        <li><a href="../html/contact.html">Contact</a></li>
-                        <li><a href="../html/about.html">About Us</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="../html/blogposts.html">Blog Posts</a></li>
+                    <li><a href="../html/contact.html">Contact</a></li>
+                    <li><a href="../html/about.html">About Us</a></li>
+                </ul>
             </div>
             <div class="logo-foot">
                 <a href="../index.html"><img src="../Images/Logo footer.png" alt="Logo of Leaf at Home"></a>
@@ -116,10 +123,10 @@
             </div>
             <div class="follow">
                 <h2>Follow</h2>
-                    <img src="../Images/Pinterest - Negative.png" alt="Follow us on Pinterest" class="pint">
-                    <img src="../Images/Facebook - Negative(1).png" alt="Follow us on Facebook" class="face">
-                    <img src="../Images/Instagram - Negative(1).png" alt="Follow us on Instagram" class="insta">
-                    <img src="../Images/Snapchat - Negative(1).png" alt="Follow us on Snapchat" class="snap">
+                <img src="../Images/Pinterest - Negative.png" alt="Follow us on Pinterest" class="pint">
+                <img src="../Images/Facebook - Negative(1).png" alt="Follow us on Facebook" class="face">
+                <img src="../Images/Instagram - Negative(1).png" alt="Follow us on Instagram" class="insta">
+                <img src="../Images/Snapchat - Negative(1).png" alt="Follow us on Snapchat" class="snap">
             </div>
         </section>
     </footer>

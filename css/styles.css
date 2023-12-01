@@ -22,13 +22,13 @@ h1, h2, h3, h4, h5 {
     font-family: "NotoSerifDisplay", Verdana, Tahoma, sans-serif;
 }
 
-.navbar {
+.nav-icons {
     background-color: #fff;
     padding: 20px;
     margin: -8px -8px 0px -8px;
 }
 
-.nav-list a {
+.menu a {
     text-decoration: none;
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
     text-transform: uppercase;
@@ -37,13 +37,12 @@ h1, h2, h3, h4, h5 {
     font-size: 20px;
 }
 
-.nav-list {
+.menu {
     list-style: none;
     background-color: rgba(255, 255, 255, 1);
     display: none;
     flex-direction: column;
     position: absolute;
-    padding-top: 20px;
     top: 151px;
     padding: 20px;
     margin-left: 0.5px;
@@ -59,13 +58,13 @@ h1, h2, h3, h4, h5 {
     background-size: cover;
 }
 
-.nav-list.show {
+.menu.show {
     display: flex;
 }
 
-.nav-list li {
+.menu li {
    margin-bottom: 20px;
- }
+}
 
 .toggle-menu {
     cursor: pointer;
@@ -89,12 +88,11 @@ h1, h2, h3, h4, h5 {
     height: auto;
 }
 
-#footer {
+.bottom-nav {
     display: flex;
     justify-content: space-around;
     background-color: #fff;
-    flex-wrap: wrap;
-    flex-direction: column;
+    flex-flow: wrap column;
     align-items: center;
 }
 
@@ -124,7 +122,7 @@ h1, h2, h3, h4, h5 {
     margin-right: 18px;
 }
 
-.navigate a:hover, .navigate li:hover, .nav-list a:hover {
+.navigate a:hover, .navigate li:hover, .menu a:hover {
     color: #B6CCC1;
     text-decoration: underline #52604E;
 }
@@ -201,16 +199,14 @@ h1, h2, h3, h4, h5 {
         font-size: 18px;
     }
 
-    .nav-list {
+    .menu {
         display: flex;
-        background-color: rgba(255, 255, 255, 1.0);
         justify-content: space-around;
         align-items: center;
         margin: auto;
         padding-top: 15px;
         flex-direction: row;
         top: 0;
-        left: 0;
         right: 0;
     }
 
@@ -218,9 +214,8 @@ h1, h2, h3, h4, h5 {
         display: none;
     }
 
-    .nav-list li {
-        margin-right: 20px;
-        margin-bottom: 0;
+    .menu li {
+        margin: 0 20px 0 0;
     }
 
     .logo-desktop {
@@ -231,13 +226,8 @@ h1, h2, h3, h4, h5 {
 }
 
 @media (min-width: 750px) {
-    #footer {
-        display: flex;
-        justify-content: space-around;
-        background-color: #fff;
-        flex-wrap: wrap;
-        flex-direction: row;
-        align-items: center;
+    .bottom-nav {
+        flex-flow: row wrap;
     }
 
     .follow {
@@ -256,6 +246,5 @@ h1, h2, h3, h4, h5 {
 
     .logo-foot img {
         max-width: 250px;
-        height: auto;
     }
 }
