@@ -16,6 +16,7 @@
             a.appendChild(r);
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
+    <script src="https://kit.fontawesome.com/07deee6de3.js" crossorigin="anonymous"></script>
     <link href="../css/styles.css" rel="stylesheet">
     <link href="../css/about.css" rel="stylesheet">
 </head>
@@ -27,15 +28,22 @@
                 </div>
                 <a href="../index.html"><img src="../Images/Logomobile.png" alt="logo of Leaf at Home in green" class="logo-mobile"></a>
                 <div></div>
-                </div>
             </div>
+        </div>
+        <div class="menu-container">
             <ul class="menu">
                 <li><a href="../index.html">Home</a></li>
-                <li><a href="../html/blogposts.html">Blog Posts</a></li>
-                <li><a href="../html/contact.html" >Contact</a></li>
+                <li class="dropdown">
+                    <a href="../html/blogposts.html">Blog <i class="fa-solid fa-angle-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../html/blogposts.html">All Posts</a></li>
+                        <li><a href="../html/plants.html">Plants</a></li>
+                    </ul>
+                </li>
+                <li><a href="../html/contact.html">Contact</a></li>
                 <li><a href="../html/about.html" id="active">About Us</a></li>
             </ul>
-        </div>
+        </div>  
     </nav>
     <header>
         <div class="upper">

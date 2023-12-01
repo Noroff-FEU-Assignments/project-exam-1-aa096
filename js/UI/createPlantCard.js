@@ -7,8 +7,6 @@ plantHeading.textContent = "Browse Plants";
 const plantHolder = document.createElement("div");
 plantHolder.classList.add("plant-holder");
 
-
-
 export function createPlantCard (plant) {
     const plantCard = document.createElement("div");
     plantCard.classList.add("plant-card");

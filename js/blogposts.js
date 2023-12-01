@@ -1,10 +1,8 @@
 import { getPosts } from "./data/API.js";
-import { showLoadingIndicator } from "./UI/loadingIndicator.js";
 import { showError } from "./UI/errorMessage.js";
 import { createBlogPosts } from "./UI/createBlogPosts.js";
 
 const postHolder = document.getElementById("posts");
-const loadHolder = document.querySelector(".load-holder");
 
 let postsToShow = 10;
 let allPosts = [];

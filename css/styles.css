@@ -28,6 +28,11 @@ h1, h2, h3, h4, h5 {
     margin: -8px -8px 0px -8px;
 }
 
+.menu-container {
+    display: flex;
+    justify-content: center;
+}
+
 .menu a {
     text-decoration: none;
     font-family: "Montserrat", Verdana, Tahoma, sans-serif;
@@ -49,6 +54,23 @@ h1, h2, h3, h4, h5 {
     left: 0;
     z-index: 1;
 } 
+
+.dropdown-menu a {
+    padding: 10px;
+    margin-bottom: -10px;
+}
+
+.dropdown-menu li:last-child {
+    padding-bottom: 10px;
+    margin-bottom: -10px;
+}
+
+.dropdown-menu {
+    list-style: none;
+    top: 100%;
+    left: 0;
+    background-color: rgba(255, 255, 255, 1);
+}
 
 .hamburger-icon {
     margin-top: 45px;
@@ -180,6 +202,11 @@ h1, h2, h3, h4, h5 {
     font-size: 15px;
 }
 
+.fa-solid {
+    display: none;
+}
+
+
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -209,6 +236,38 @@ h1, h2, h3, h4, h5 {
         top: 0;
         right: 0;
     }
+
+    .dropdown {
+        position: relative;
+    }
+    
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        list-style: none;
+        top: 100%;
+        left: 0;
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+
+    .dropdown-menu li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .dropdown-menu li {
+        width: 140px;
+        padding: 5px;
+    }
+
+    .fa-solid {
+        display: inline-block;
+    }
+
 
     .hamburger-icon {
         display: none;

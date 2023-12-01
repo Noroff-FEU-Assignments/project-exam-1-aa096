@@ -1,0 +1,142 @@
+.upper {
+    display: flex;
+    justify-content: space-around;
+}
+
+.upper .logo-desktop img {
+    padding: 20px 0;
+    max-width: 200px;
+    height: auto; 
+}
+
+.upper .plantleft img {
+    max-width: 270px;
+    height: auto;
+    margin-bottom: -120px;
+}
+
+.upper .plantright img {
+    margin-top: 80px;
+    max-width: 260px;
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    right: 13px;
+    display: none;
+}
+
+.load-holder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card {
+    background-color: #B6CCC1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 270px;
+    height: 470px;
+    padding: 10px;
+}
+
+.card a {
+    text-decoration: none;
+    text-align: center;
+}
+
+.card img {
+    width: 240px;
+    height: 304px;
+    padding: 10px;
+    object-fit: cover;
+    object-position: 50% 50%;
+}
+
+.card-p {
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #52604F;
+    font-weight: 400;
+    text-align: center;
+}
+
+#posts {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 20px 0 40px 0;
+    margin: 20px 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 45px;
+    color: #52604e;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.post-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.read-btn {
+    background-color: #52604F;
+    color: #fff;
+    font-family: "Montserrat", Verdana, Tahoma, sans-serif;
+    border-radius: 0;
+    border-style: none;
+    height: 38px;
+    padding: 3px 35px;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+} 
+
+.read-btn:hover {
+    background-color: #fff;
+    color: #52604F;
+    font-weight: bold;
+}
+
+.button-div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-flow: wrap column;
+}
+
+@media (min-width: 600px) {
+    .upper .plantleft img {
+        position: absolute;
+        z-index: 999;
+        margin-top: 20px;
+        left: -30px;
+    }
+
+    #posts {
+        margin: 20px 40px;
+    }
+}
+
+@media (min-width: 712px) {
+    .upper .plantleft img {
+        left: 40px;
+    }
+}
+
+@media (min-width: 790px) {
+    .upper .plantright img {
+        display: block;
+    }
+}

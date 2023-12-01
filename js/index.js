@@ -15,9 +15,9 @@ let latest;
 let postPerPage;
 
 function responsivePosts () {
-    if (window.innerWidth >= 1410) {
+    if (window.innerWidth >= 1420) {
         postPerPage = 4;
-    } else if (window.innerWidth >= 1021) {
+    } else if (window.innerWidth >= 1120) {
         postPerPage = 3;
     } else if (window.innerWidth >= 715) {
         postPerPage = 2;
@@ -28,7 +28,7 @@ function responsivePosts () {
 
 function renderLatestPosts() {
     postsDiv.innerHTML = "";
-    const latestPosts = latest.slice(0, 13);
+    const latestPosts = latest.slice(0, 15);
         
     for (let i = currentIndex; i < currentIndex + postPerPage && i < latestPosts.length; i++) {
         const post = latest[i];
@@ -78,15 +78,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 async function getPlants() {
     try { 
         const plants = await getPosts();
+        let cardCounter = 0; 
 
     for (let i = 0; i < plants.length; i++) {
         const plant = plants[i];
 
-       if(plant.tags && plant.tags.includes(25)) {
-            createPlantCard(plant);
+       if (plant.tags && plant.tags.includes(25)) {
+            if (cardCounter < 4) {
+                createPlantCard(plant);
+                cardCounter++;
+            }
         }
 
-        if(plant.id === 57) {
+        if (plant.id === 57) {
             createFeaturedPost(plant);
         }
 
