@@ -39,3 +39,26 @@ snap.addEventListener("mouseover", function() {
 snap.addEventListener("mouseout", function() {
     snap.src = "../Images/Snapchat - Negative(1).png"
 })
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    var dropdownLinks = document.querySelectorAll(".dropdown > a");
+
+    dropdownLinks.forEach(function (link) {
+        link.addEventListener("click", function (e) {
+            e.preventDefault();
+            var dropdownMenu = this.nextElementSibling; 
+            toggleDropdown(dropdownMenu);
+            toggleIcon (this.querySelector("i"));
+        });
+    });
+    
+    function toggleDropdown(menu) {
+        menu.classList.toggle("show"); 
+    }
+
+    function toggleIcon(icon) {
+        icon.classList.toggle("fa-angle-down");
+        icon.classList.toggle("fa-angle-up");
+    }
+});

@@ -49,6 +49,11 @@ function openModal (event) {
         modalContent.alt = event.target.querySelector('img').alt;
     }
 
+    const closeIcon = document.createElement("i");
+    closeIcon.classList.add("fa-solid", "fa-xmark", "close-icon");
+    closeIcon.addEventListener("click", closeModal);
+
+    modalContainer.appendChild(closeIcon);
     modalContainer.appendChild(modalContent);
     
     document.body.appendChild(modalContainer);

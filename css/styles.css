@@ -66,10 +66,15 @@ h1, h2, h3, h4, h5 {
 }
 
 .dropdown-menu {
+    display: none;
     list-style: none;
     top: 100%;
     left: 0;
     background-color: rgba(255, 255, 255, 1);
+}
+
+.dropdown-menu.show {
+    display: block;
 }
 
 .hamburger-icon {
@@ -202,11 +207,6 @@ h1, h2, h3, h4, h5 {
     font-size: 15px;
 }
 
-.fa-solid {
-    display: none;
-}
-
-
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
@@ -216,6 +216,15 @@ h1, h2, h3, h4, h5 {
  color: #52604E;
  text-align: center;
 }
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+  }
 
 @media (min-width: 600px) {
     .toggle-menu {
