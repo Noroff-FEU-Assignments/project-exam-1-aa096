@@ -28,7 +28,7 @@ function responsivePosts () {
 
 function renderLatestPosts() {
     postsDiv.innerHTML = "";
-    const latestPosts = latest.slice(0, 15);
+    const latestPosts = latest.slice(0, 16);
         
     for (let i = currentIndex; i < currentIndex + postPerPage && i < latestPosts.length; i++) {
         const post = latest[i];

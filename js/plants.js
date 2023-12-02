@@ -11,7 +11,7 @@ async function getPlants() {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
 
-       if (post.categories && post.categories.includes(21)) {
+       if (post.tags && post.tags.includes(25)) {
                 createBlogPosts(post);
         }
     }

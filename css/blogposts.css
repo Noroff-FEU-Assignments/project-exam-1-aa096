@@ -159,3 +159,9 @@ h1 {
         display: block;
     }
 }
+
+@media (min-width: 1406px) {
+    .post-div {
+        gap: 30px;
+    }
+}

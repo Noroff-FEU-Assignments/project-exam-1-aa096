@@ -15,15 +15,24 @@ export function createSpesificPost (result) {
     content.classList.add("content-p");
     content.innerHTML = result.content.rendered;
 
+    const imageWrapper = document.createElement("div");
+    imageWrapper.classList.add("image-wrapper");
+
     const featuredImg = document.createElement("img");
     featuredImg.src = result.jetpack_featured_media_url;
     featuredImg.alt = result.title.rendered;
+
+    const magnifyingGlassIcon = document.createElement("i");
+    magnifyingGlassIcon.classList.add("fa-solid", "fa-magnifying-glass-plus", "magnifying-glass-icon");
+
 
     blogSpesificDiv.appendChild(blogHolder);
     blogHolder.appendChild(postTitle);
     blogHolder.appendChild(textAndImg);
     textAndImg.appendChild(content); 
-    textAndImg.appendChild(featuredImg);
+    textAndImg.appendChild(imageWrapper);
+    imageWrapper.appendChild(featuredImg);
+    imageWrapper.appendChild(magnifyingGlassIcon);
 
     featuredImg.addEventListener("click", openModal);
     const contentImages = textAndImg.querySelectorAll("img");
@@ -54,6 +63,7 @@ function openModal (event) {
     closeIcon.addEventListener("click", closeModal);
 
     modalContainer.appendChild(closeIcon);
+    modalContainer.appendChild(modalContent)
     modalContainer.appendChild(modalContent);
     
     document.body.appendChild(modalContainer);

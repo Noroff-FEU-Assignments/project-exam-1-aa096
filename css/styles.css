@@ -238,6 +238,20 @@ h1, h2, h3, h4, h5 {
     color: #758d82;
 } 
 
+.image-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.magnifying-glass-icon {
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.6);;
+    cursor: pointer;
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+}
 
 @media (min-width: 600px) {
     .toggle-menu {
