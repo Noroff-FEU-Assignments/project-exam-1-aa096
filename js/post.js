@@ -1,5 +1,6 @@
-import { showError } from "./UI/errorMessage.js";
+import { showError } from "./utils/errorMessage.js";
 import { createSpesificPost } from "./UI/createBlogSpesificPost.js";
+import { showLoadingIndicator, hideLoadingIndicator } from "./utils/loadingIndicator.js";
 
 
 const postDiv = document.getElementById("post-container");
@@ -13,20 +14,23 @@ const url = "https://aashild-rasmussen.no/wp-json/wp/v2/posts/"+ id;
 
 async function getPost() {
     try { 
+        showLoadingIndicator();
         const response = await fetch(url);
 
         if (!response.ok) {
-            throw new Error("Error, unable to fetch posts");
+            throw new Error("Error, unable to fetch post");
         }
 
         postDiv.innerHTML = '';
 
         const result = await response.json();
+            hideLoadingIndicator();
             getTitle(result);
             createSpesificPost(result);
         } 
 
         catch (error) {
+            hideLoadingIndicator();
             showError (error.message, "#post-container");
         }
 }

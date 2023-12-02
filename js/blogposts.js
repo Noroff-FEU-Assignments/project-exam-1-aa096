@@ -1,5 +1,5 @@
-import { getPosts } from "./data/API.js";
-import { showError } from "./UI/errorMessage.js";
+import { getPosts } from "./data/postAPI.js";
+import { showError } from "./utils/errorMessage.js";
 import { createBlogPosts } from "./UI/createBlogPosts.js";
 
 const postHolder = document.getElementById("posts");
@@ -14,7 +14,7 @@ loadMoreBtn.textContent = "Load More Posts"
 loadMoreBtn.addEventListener("click", loadMore);
 
 
-async function displayBlogPosts() {
+async function displayAllBlogPosts() {
     try {
         allPosts = await getPosts();
 
@@ -58,4 +58,4 @@ async function loadMore() {
     }
 }
 
-displayBlogPosts();
+displayAllBlogPosts();

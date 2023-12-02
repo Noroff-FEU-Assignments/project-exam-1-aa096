@@ -1,5 +1,5 @@
-import { getPosts } from "./data/API.js";
-import { showError } from "./UI/errorMessage.js";
+import { getPosts } from "./data/postAPI.js";
+import { showError } from "./utils/errorMessage.js";
 import { createBlogPosts } from "./UI/createBlogPosts.js";
 
 const plantHolder = document.getElementById("plants");
@@ -11,7 +11,7 @@ async function getPlants() {
     for (let i = 0; i < posts.length; i++) {
         const post = posts[i];
 
-       if (post.tags && post.tags.includes(25)) {
+       if (post.categories && post.categories.includes(21)) {
                 createBlogPosts(post);
         }
     }

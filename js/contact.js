@@ -1,4 +1,4 @@
-import { validateEmail, checkLength } from "./UI/validatorFuctions.js";
+import { validateEmail, checkLength } from "./utils/validatorFuctions.js";
 
 const form = document.getElementById("contact-form");
 const name = document.getElementById("name");

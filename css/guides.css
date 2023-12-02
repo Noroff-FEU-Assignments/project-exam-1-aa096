@@ -142,8 +142,8 @@ h1 {
     }
 
     .guide-holder {
-        padding: 15px;
-        margin: 0 20px -160px 20px;
+        padding: 10px;
+        margin: 0 20px -170px 20px;
     }
 
     .guide {
@@ -176,4 +176,14 @@ h1 {
         object-fit: cover;
         object-position: 50% 50%;
     }
+
+    .heading-p {
+        max-width: 370px;
+    }
 }
+
+ @media (min-width: 810px) {
+    #care-guide {
+        margin: 50px 40px;
+    }
+} 

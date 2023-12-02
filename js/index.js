@@ -1,5 +1,5 @@
-import { showError } from "./UI/errorMessage.js"; 
-import { getPosts } from "./data/API.js";
+import { showError } from "./utils/errorMessage.js"; 
+import { getPosts } from "./data/postAPI.js";
 import { createPostCards } from "./UI/createPostCards.js";
 import { createPlantCard } from "./UI/createPlantCard.js";
 import { createFeaturedPost } from "./UI/createFeaturedPost.js";

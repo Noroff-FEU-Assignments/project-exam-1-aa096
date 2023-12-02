@@ -79,7 +79,7 @@ h1, h2, h3, h4, h5 {
 
 .hamburger-icon {
     margin-top: 45px;
-    width: 30px;
+    width: 35px;
     height: 30px;
     background-image: url(../Images/Hamburger.png);
     background-size: cover;
@@ -124,7 +124,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .navigate h5, .navigate h2, .follow h5, .follow h2 {
-    font-size: 35px;
+    font-size: 25px;
+    font-weight: 600;
     text-decoration: underline;
     color: #52604F;
     text-align: center;
@@ -150,7 +151,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .navigate a:hover, .navigate li:hover, .menu a:hover {
-    color: #B6CCC1;
+    color: #758d82;
     text-decoration: underline #52604E;
 }
 
@@ -160,6 +161,7 @@ h1, h2, h3, h4, h5 {
     align-items: center;
     position: fixed;
     z-index: 999;
+    margin-top: 200px;
     top: 0;
     left: 0;
     width: 100%;
@@ -224,7 +226,18 @@ h1, h2, h3, h4, h5 {
     color: white;
     font-size: 40px;
     cursor: pointer;
-  }
+}
+
+.follow i {
+    font-size: 40px;
+    color: #9BBFAE;
+    padding: 3px;
+}
+
+.follow i:hover {
+    color: #758d82;
+} 
+
 
 @media (min-width: 600px) {
     .toggle-menu {
@@ -291,6 +304,9 @@ h1, h2, h3, h4, h5 {
         display: block;
     }
 
+    .navigate h5, .navigate h2, .follow h5, .follow h2 {
+        font-size: 35px;
+    }
 }
 
 @media (min-width: 750px) {
@@ -299,9 +315,9 @@ h1, h2, h3, h4, h5 {
     }
 
     .follow {
-        margin-top: -60px;
-        padding-bottom: 10px;
+        margin-top: -80px;
         order: 3;
+        text-align: center;
     }
 
     .logo-foot {

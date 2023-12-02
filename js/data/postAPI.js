@@ -1,4 +1,4 @@
-import { showLoadingIndicator, hideLoadingIndicator } from "../UI/loadingIndicator.js";
+import { showLoadingIndicator, hideLoadingIndicator } from "../utils/loadingIndicator.js";
 
 export async function getPosts() {
     const url = "https://aashild-rasmussen.no/wp-json/wp/v2/posts?per_page=100";
@@ -17,6 +17,7 @@ try {
     return result; 
 
     } catch (error) {
+        hideLoadingIndicator();
     throw error;
     }
 }
