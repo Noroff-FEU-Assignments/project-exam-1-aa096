@@ -1,9 +1,5 @@
 const careDiv = document.querySelector("#care-guide");
 
-const careHeading = document.createElement("h4");
-careHeading.classList.add("care-h4");
-careHeading.textContent = "Care Guides";
-
 const firstDiv = document.createElement ("div");
 firstDiv.classList.add("first-div");
 
@@ -33,7 +29,6 @@ export function CreateCareGuide (plant) {
     readButton.classList.add("more-btn");
     readButton.textContent = "Read the Guide";
 
-    careDiv.appendChild(careHeading);
     careDiv.appendChild(firstDiv);
     firstDiv.appendChild(guide);
     guide.appendChild(guideLink);

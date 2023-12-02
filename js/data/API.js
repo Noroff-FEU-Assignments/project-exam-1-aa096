@@ -13,7 +13,7 @@ try {
     }
     const result = await response.json();
     hideLoadingIndicator();
-    
+
     return result; 
 
     } catch (error) {

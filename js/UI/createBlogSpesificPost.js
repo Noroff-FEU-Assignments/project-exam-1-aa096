@@ -60,8 +60,8 @@ function openModal (event) {
 }
 
 function closeModal(event) {
-    if (event.target.classList.contains("modal-container")) {
-        event.target.remove();
+    if (event.target.classList.contains("modal-container") || event.target.classList.contains("close-icon")) {
+        document.body.removeChild(event.target.closest(".modal-container"));
     }
 }
 

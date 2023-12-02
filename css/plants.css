@@ -10,25 +10,19 @@
 }
 
 .upper .plantleft img {
-    max-width: 270px;
+    max-width: 200px;
     height: auto;
-    margin-bottom: -120px;
+    margin-bottom: -15px;
 }
 
 .upper .plantright img {
-    margin-top: 80px;
+    margin-top: 130px;
     max-width: 260px;
     height: auto;
     z-index: 1;
     position: absolute;
     right: 13px;
     display: none;
-}
-
-.load-holder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .card {
@@ -72,7 +66,7 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding: 20px 0 40px 0;
-    margin: 20px 20px;
+    margin: 10px 20px;
 }
 
 h1 {
@@ -120,12 +114,16 @@ h1 {
     .upper .plantleft img {
         position: absolute;
         z-index: 999;
-        margin-top: 20px;
+        margin-top: 92px;
         left: -30px;
     }
 
     #posts {
         margin: 20px 40px;
+    }
+
+    .upper .plantleft img {
+        max-width: 250px;
     }
 }
 

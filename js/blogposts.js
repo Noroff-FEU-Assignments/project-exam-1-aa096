@@ -34,7 +34,6 @@ async function displayBlogPosts() {
         showError (error.message, "#posts");
     }
 }
-    
 
 function updateVisiblePosts () {
     const additionalPosts = allPosts.slice(postsToShow - 10, postsToShow);
