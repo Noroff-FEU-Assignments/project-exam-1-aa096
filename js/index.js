@@ -15,7 +15,9 @@ let latest;
 let postPerPage;
 
 function responsivePosts () {
-    if (window.innerWidth >= 1420) {
+    if (window.innerWidth >= 1800) {
+        postPerPage = 5;
+    } else if (window.innerWidth >= 1420) {
         postPerPage = 4;
     } else if (window.innerWidth >= 1120) {
         postPerPage = 3;
@@ -86,13 +88,17 @@ export async function getAndCreatePlantCard(plant) {
 async function getPlants() {
     try { 
         const plants = await getPosts();
-        let cardCounter = 0; 
+        let cardCounter = 0;
 
     for (let i = 0; i < plants.length; i++) {
         const plant = plants[i];
 
        if (plant.tags && plant.tags.includes(25)) {
             if (cardCounter < 4) {
+                createPlantCard(plant);
+                cardCounter++;
+            }
+            else if (window.innerWidth >= 1800 && cardCounter < 5) {
                 createPlantCard(plant);
                 cardCounter++;
             }
