@@ -34,7 +34,7 @@ export function createFeaturedPost (plant) {
 
     const featuredImg = document.createElement("img");
     featuredImg.src = plant.jetpack_featured_media_url;
-    featuredImg.alt = plant.title.rendered;
+    featuredImg.alt = plant['better_featured_image']['alt_text'];
 
     
 

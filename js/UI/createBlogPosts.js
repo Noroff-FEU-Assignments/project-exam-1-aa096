@@ -12,7 +12,7 @@ export function createBlogPosts(post) {
 
     const blogImg = document.createElement("img");
     blogImg.src = post.jetpack_featured_media_url;
-    blogImg.alt = post.title.rendered;
+    blogImg.alt = post['better_featured_image']['alt_text'];
 
     const postTitle = document.createElement("p");
     postTitle.classList.add("card-p");

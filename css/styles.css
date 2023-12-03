@@ -42,6 +42,7 @@ h1, h2, h3, h4, h5 {
     font-size: 20px;
 }
 
+
 .menu {
     list-style: none;
     background-color: rgba(255, 255, 255, 1);
@@ -54,6 +55,7 @@ h1, h2, h3, h4, h5 {
     left: 0;
     z-index: 1;
 } 
+
 
 .dropdown-menu a {
     padding: 10px;
@@ -123,7 +125,7 @@ h1, h2, h3, h4, h5 {
     align-items: center;
 }
 
-.navigate h5, .navigate h2, .follow h5, .follow h2 {
+.navigate h5, .navigate h2, .navigate h4, .follow h5, .follow h2, .follow h4 {
     font-size: 25px;
     font-weight: 600;
     text-decoration: underline;
@@ -216,6 +218,7 @@ h1, h2, h3, h4, h5 {
 
 .error {
  color: #52604E;
+ background-color: #fff;
  text-align: center;
 }
 
@@ -318,7 +321,7 @@ h1, h2, h3, h4, h5 {
         display: block;
     }
 
-    .navigate h5, .navigate h2, .follow h5, .follow h2 {
+    .navigate h5, .navigate h2, .navigate h4, .follow h5, .follow h2, .follow h4 {
         font-size: 35px;
     }
 }

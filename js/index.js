@@ -73,7 +73,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 })
 
 
+export async function getAndCreatePlantCard(plant) {
+    try {
+        const images = await getImages({ id: plant.id });
+        createPlantCard(plant, images);
 
+    } catch (error) {
+        showError(error.message, "#plants");
+    }
+}
 
 async function getPlants() {
     try { 

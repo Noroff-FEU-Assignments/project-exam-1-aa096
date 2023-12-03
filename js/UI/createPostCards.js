@@ -18,7 +18,7 @@ export function createPostCards(post) {
 
     const postImg = document.createElement("img");
     postImg.src = post.jetpack_featured_media_url;
-    postImg.alt = post.title.rendered;
+    postImg.alt = post['better_featured_image']['alt_text'];
 
     const postTitle = document.createElement("p");
     postTitle.classList.add("card-p");

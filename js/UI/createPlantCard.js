@@ -7,7 +7,7 @@ plantHeading.textContent = "Browse Plants";
 const plantHolder = document.createElement("div");
 plantHolder.classList.add("plant-holder");
 
-export function createPlantCard (plant) {
+export function createPlantCard (plant, images) {
     const plantCard = document.createElement("div");
     plantCard.classList.add("plant-card");
 
@@ -16,11 +16,11 @@ export function createPlantCard (plant) {
 
     const plantImg = document.createElement("img");
     plantImg.src = plant.jetpack_featured_media_url;
-    plantImg.alt = plant.title.rendered;
+    plantImg.alt = plant['better_featured_image']['alt_text'];
 
     const plantTitle = document.createElement("p");
     plantTitle.classList.add("plant-p");
-    plantTitle.textContent = plant.title.rendered;
+    plantTitle.textContent = plant.title.rendered; 
 
     const readBtn = document.createElement("button");
     readBtn.classList.add("read-btn");

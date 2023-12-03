@@ -20,7 +20,7 @@ export function createSpesificPost (result) {
 
     const featuredImg = document.createElement("img");
     featuredImg.src = result.jetpack_featured_media_url;
-    featuredImg.alt = result.title.rendered;
+    featuredImg.alt = result['better_featured_image']['alt_text'];
 
     const magnifyingGlassIcon = document.createElement("i");
     magnifyingGlassIcon.classList.add("fa-solid", "fa-magnifying-glass-plus", "magnifying-glass-icon");

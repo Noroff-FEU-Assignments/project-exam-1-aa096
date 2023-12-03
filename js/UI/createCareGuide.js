@@ -12,7 +12,7 @@ export function CreateCareGuide (plant) {
 
     const guideImg = document.createElement("img");
     guideImg.src = plant.jetpack_featured_media_url;
-    guideImg.alt = plant.title.rendered;
+    guideImg.alt = plant['better_featured_image']['alt_text'];
 
     const careHolder = document.createElement("div");
     careHolder.classList.add("guide-holder");
