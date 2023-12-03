@@ -36,8 +36,6 @@ export function createFeaturedPost (plant) {
     featuredImg.src = plant.jetpack_featured_media_url;
     featuredImg.alt = plant['better_featured_image']['alt_text'];
 
-    
-
     featuredDiv.appendChild(featuredHolder);
     featuredHolder.appendChild(featuredLink);
     featuredLink.appendChild(contentDiv);

@@ -28,6 +28,7 @@
 .contact {
     background-color: #fff;
     margin: -5px 10px 30px 10px;
+    padding-bottom: 5px;
 }
 
 .form-div {
@@ -202,12 +203,12 @@ h1 {
 @media (min-width: 450px) {
     .contact {
         margin: -5px 40px 40px;
-        padding-bottom: 5px;
     }
 
     .find-us p {
         font-size: 18px;
     }
+
 }
 
 

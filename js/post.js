@@ -2,13 +2,12 @@ import { showError } from "./utils/errorMessage.js";
 import { createSpesificPost } from "./UI/createBlogSpesificPost.js";
 import { showLoadingIndicator, hideLoadingIndicator } from "./utils/loadingIndicator.js";
 
-
 const postDiv = document.getElementById("post-container");
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const id = params.get("id");
-const title = params.get("name")
+const title = params.get("name");
 
 const url = "https://aashild-rasmussen.no/wp-json/wp/v2/posts/"+ id;
 

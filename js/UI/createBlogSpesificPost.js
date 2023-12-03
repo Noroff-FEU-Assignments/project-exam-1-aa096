@@ -25,7 +25,6 @@ export function createSpesificPost (result) {
     const magnifyingGlassIcon = document.createElement("i");
     magnifyingGlassIcon.classList.add("fa-solid", "fa-magnifying-glass-plus", "magnifying-glass-icon");
 
-
     blogSpesificDiv.appendChild(blogHolder);
     blogHolder.appendChild(postTitle);
     blogHolder.appendChild(textAndImg);
