@@ -221,3 +221,20 @@ figure {
         max-width: 600px;
     }
 }
+
+@media (min-width: 1600px) {
+    .text-img img, .image-wrapper img {  
+        max-width: 800px;
+    }
+
+    .wp-block-image img{
+        max-width: 600px;
+        height: auto;
+    }
+}
+
+@media (min-width: 1971px) {
+    .text-img img, .image-wrapper img {  
+        max-width: 900px;
+    }
+}
