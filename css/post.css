@@ -53,7 +53,7 @@ h1 {
    line-height: 1.5;
 }
 
-.text-img img {
+.text-img img, .image-wrapper img {
     max-width: 250px;
     height: auto;
 }
@@ -142,7 +142,7 @@ figure {
         margin: 20px 40px;
     }
     
-    .text-img img {
+    .text-img img, .image-wrapper img {
         max-width: 350px;
     }
 }
@@ -184,7 +184,7 @@ figure {
         display: block;
     }
 
-    .text-img img {
+    .text-img img, .image-wrapper img {
         max-width: 600px;
     }
 
@@ -207,7 +207,7 @@ figure {
     }
         
 
-    .text-img img {
+    .text-img img, .image-wrapper img {
         max-width: 400px;
     }
 
@@ -217,7 +217,7 @@ figure {
 }
 
 @media (min-width: 1400px) {
-    .text-img img {     
+    .text-img img, .image-wrapper img {  
         max-width: 600px;
     }
 }

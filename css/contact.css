@@ -119,6 +119,7 @@ input#message {
 
 legend {
    text-transform: uppercase;
+   text-align: center;
    letter-spacing: 3px;
    font-size: 25px;
    font-weight: 600;

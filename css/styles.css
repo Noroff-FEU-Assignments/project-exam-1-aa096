@@ -109,6 +109,7 @@ h1, h2, h3, h4, h5 {
     display: none;
     color: #fff;
     max-width: 300px;
+    height: auto;
     text-align: center;
 }
 
