@@ -1,6 +1,6 @@
 # Leaf at Home - Project Exam 1  
 
-![image](./Images/leafathome.webp.webp)
+![image](/Images/leafathome.webp)
 
 In this project we were tasked with creating a blog site with design and topics by choice.  
 
