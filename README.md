@@ -6,7 +6,15 @@ In this project we were tasked with creating a blog site with design and topics 
 
 ## Description
 
-A e-commerce website made with HTML, CSS, vanilla JavaScript. The product listings on this site are dynamically sourced through an API connected to a headless CMS. The store is for a brand called Rainy Days that sells rainwear made for people in the age of 30-50 with an active lifestyle.
+A houseplant blog made with HTML, CSS, Vanilla JavaScript. Posts displayed on the blog dynamically fetched through an API connected to a headless CMS. The Leaf at Home blog features blog content about green houseplants, tips and tricks.
+
+## Table of content: 
+
+- Homepage
+- All Blog Posts
+- Blog Posts sorted by tag
+- Contact
+- About US
 
 ## Built With
 
@@ -21,7 +29,7 @@ A e-commerce website made with HTML, CSS, vanilla JavaScript. The product listin
 1. Clone the repo:
 
 ```bash
-git clone git@github.com/aa096/CA-HTML-CSS.git
+git clone git@github.com/Noroff-FEU-Assignments/project-exam-1-aa096.git
 ```
 
 ## Contact
